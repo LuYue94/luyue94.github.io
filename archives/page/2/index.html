@@ -6,18 +6,14 @@
   <meta name="keywords" content>
   <meta name="description" content="Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="1、vue解决了什么问题2、MVVM的理解3、如何实现一个自定义组件，不同组件之间如何通信的？4、nextTick5、生命周期6、虚拟dom的原理7、双向绑定的原理？数据劫持？8、组件通信 父-&amp;gt;子子-&amp;gt;父非父子组件9、Proxy 相比于 defineProperty 的优势10、watch computed区别11、virtual dom 原理实现12、vue-router(hash">
-<meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue">
-<meta property="og:url" content="http://luyue94.github.com/2018/03/23/VUE/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://luyue94.github.com/2019/09/18/前端/vue/vue总结/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、vue解决了什么问题2、MVVM的理解3、如何实现一个自定义组件，不同组件之间如何通信的？4、nextTick5、生命周期6、虚拟dom的原理7、双向绑定的原理？数据劫持？8、组件通信 父-&amp;gt;子子-&amp;gt;父非父子组件9、Proxy 相比于 defineProperty 的优势10、watch computed区别11、virtual dom 原理实现12、vue-router(hash">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-18T08:16:28.901Z">
+<meta property="og:updated_time" content="2019-09-18T08:58:47.253Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue">
-<meta name="twitter:description" content="1、vue解决了什么问题2、MVVM的理解3、如何实现一个自定义组件，不同组件之间如何通信的？4、nextTick5、生命周期6、虚拟dom的原理7、双向绑定的原理？数据劫持？8、组件通信 父-&amp;gt;子子-&amp;gt;父非父子组件9、Proxy 相比于 defineProperty 的优势10、watch computed区别11、virtual dom 原理实现12、vue-router(hash">
+<meta name="twitter:title" content="Hexo">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -100,11 +96,19 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(11)</small></div></li>
+    <li><div class="all active">全部文章<small>(70)</small></div></li>
     
         
             
-            <li><div data-rel="前端">前端<small>(10)</small></div>
+            <li><div data-rel="前端"><i class="fold iconfont icon-right"></i>前端<small>(19)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="ES6">ES6<small>(9)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
                 
             </li>
             
@@ -112,9 +116,37 @@
     
         
             
-            <li><div data-rel="工具">工具<small>(1)</small></div>
+            <li><div data-rel="后端">后端<small>(1)</small></div>
                 
             </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="工具">工具<small>(7)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="面试">面试<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="算法">算法<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
             
         
     
@@ -128,7 +160,7 @@
     </div>
     <div></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="11">
+<input type="hidden" id="yelog_site_posts_number" value="70">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -161,19 +193,11 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">CSS</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">HTML</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">JS</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">Markdown</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -181,15 +205,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">Vue</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">工具</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">浏览器</a>
+        <a href="javascript:" class="color5">HTML</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -197,7 +213,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">算法</a>
+        <a href="javascript:" class="color3">工具</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">JS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Vue</a>
     </li>
     
     <div class="clearfix"></div>
@@ -206,72 +230,112 @@
     
     <nav id="title-list-nav">
         
-        <a  class="前端 "
-           href="/2018/03/23/CSS/"
-           data-tag="CSS"
-           data-author="" >
-            <span class="post-title" title="CSS">CSS</span>
-            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
-        </a>
-        
-        <a  class="前端 "
-           href="/2018/03/23/HTML/"
-           data-tag="HTML"
-           data-author="" >
-            <span class="post-title" title="HTML">HTML</span>
-            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
-        </a>
-        
-        <a  class="前端 "
-           href="/2018/03/23/JS/"
-           data-tag="JS"
-           data-author="" >
-            <span class="post-title" title="JS">JS</span>
-            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
-        </a>
-        
-        <a  class="工具 "
-           href="/2018/03/23/Markdown/"
-           data-tag="Markdown"
-           data-author="" >
-            <span class="post-title" title="Markdown">Markdown</span>
-            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
-        </a>
-        
-        <a  class="前端 "
-           href="/2018/03/23/React/"
-           data-tag="React"
-           data-author="" >
-            <span class="post-title" title="React">React</span>
-            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
-        </a>
-        
-        <a  class="前端 "
-           href="/2018/03/23/VUE/"
-           data-tag="Vue"
-           data-author="" >
-            <span class="post-title" title="Vue">Vue</span>
-            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
-        </a>
-        
-        <a  class="前端 "
-           href="/2018/03/23/其他/"
+        <a  class=""
+           href="/2019/09/18/Nodejs/Directory/"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="常见问题">常见问题</span>
-            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
         </a>
         
-        <a  class="前端 "
-           href="/2018/03/23/工具/"
-           data-tag="工具"
+        <a  class=""
+           href="/2019/09/18/Nodejs/Buffer/"
+           data-tag=""
            data-author="" >
-            <span class="post-title" title="开发工具">开发工具</span>
-            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/EventEmitter/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/HTTP服务器/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/FileSystem/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/http模块/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/Stream/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/node常用/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/module/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/node应用/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/process/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/基础笔记/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/模块/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
         </a>
         
         <a  class="前端 "
-           href="/2018/03/23/浏览器 http/"
+           href="/2018/03/23/前端/浏览器 http/"
            data-tag="浏览器"
            data-author="" >
             <span class="post-title" title="浏览器 HTTP">浏览器 HTTP</span>
@@ -279,19 +343,451 @@
         </a>
         
         <a  class="前端 "
-           href="/2018/03/23/移动端/"
+           href="/2018/03/23/前端/CSS/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="CSS">CSS</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/ReactNative/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Navtive2">React Navtive2</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/HTML/"
+           data-tag="HTML"
+           data-author="" >
+            <span class="post-title" title="HTML">HTML</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/ReactNative样式/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Native">React Native</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/移动端/"
            data-tag="移动端"
            data-author="" >
             <span class="post-title" title="移动端">移动端</span>
             <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
         </a>
         
-        <a  class="前端 "
-           href="/2018/03/23/算法/"
-           data-tag="算法"
+        <a  class="后端 "
+           href="/2018/03/23/后端/MongoDB/"
+           data-tag=""
            data-author="" >
-            <span class="post-title" title="算法">算法</span>
+            <span class="post-title" title="MongoDB">MongoDB</span>
             <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/emmet语法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="emmet">emmet</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/gulp+webpack配置/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="gulp+webpack的配置">gulp+webpack的配置</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/markdown语法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Markdown">Markdown</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/scss和gulp-sass/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Gulp-sass">Gulp-sass</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/webpack/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Webpack">Webpack</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/博客搭建/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="博客搭建">博客搭建</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/工具/工具/"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="开发工具">开发工具</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/正则表达式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式">正则表达式</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2018/03/23/面试/JS/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="面试：JS">面试：JS</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2018/03/23/面试/阿里2017/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="2017暑期阿里面试总结(前端方向)">2017暑期阿里面试总结(前端方向)</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2018/03/23/面试/面试常见问题/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="面试常见问题">面试常见问题</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/数据结构/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据结构">数据结构</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2018/03/23/面试/面试：Vue/"
+           data-tag="Vue"
+           data-author="" >
+            <span class="post-title" title="面试：Vue">面试：Vue</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/树与二叉树/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="树与二叉树">树与二叉树</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/算法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="算法问题">算法问题</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/算法排序/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="排序">排序</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/vue/vue总结/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:58:47">2019/09/18</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6函数扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6函数扩展">ES6函数扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6数组扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6数组扩展">ES6数组扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6基础/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6基础">ES6基础</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6正则表达式扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6正则表达式扩展">ES6正则表达式扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/let与const命令/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6let与const">ES6let与const</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/字符串/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6字符串">ES6字符串</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/字符编码/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6字符编码">ES6字符编码</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/解构赋值/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6解构赋值">ES6解构赋值</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/HTML5/Directory/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/HTML5/本地存储/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/HTML5/SVG/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/Ajax/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/CommonJS/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/DOM对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/DOM样式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/HTML网页API/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/JSON/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/Directory/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/Object对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/export、import与require/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/npm/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/webpack/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/window对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/函数/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/数组/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/标准对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/移动端事件/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/前端/javascript/面向对象编程/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:09">2019/09/18</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/React1/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React1">React1</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/React2/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React2">React2</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/reactRouter/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Router">React Router</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6对象扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6对象扩展">ES6对象扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/09/18/Nodejs/Express中文文档/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2019-09-18 16:30:08">2019/09/18</span>
         </a>
         
     </nav>
@@ -309,7 +805,7 @@
         <article class="index">
             <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于：LuYue"><span class="toc-text">关于：LuYue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -322,22 +818,11 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/">Hexo</a> 生成，部署在 <a href="https://pages.github.com/">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
+            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="关于：LuYue"><a href="#关于：LuYue" class="headerlink" title="关于：LuYue"></a>关于：LuYue</h2><!-- 到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。
+
+本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次 -->
+
+<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/">Hexo</a> 生成，部署在 <a href="https://pages.github.com/">GitHub Pages</a>，使用开源主题 <a href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> ，在此感谢主题作者！</p>
 <p>主要功能：</p>
 <ul>
 <li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
@@ -398,7 +883,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#CSS','#HTML','#JS','#Markdown','#React','#Vue','#工具','#浏览器','#移动端','#算法',],
+            'data': ['#浏览器','#CSS','#React','#HTML','#移动端','#工具','#JS','#Vue',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
@@ -421,20 +906,6 @@
         
 
         /*高亮代码块行号*/
-        
-        $('pre code').each(function(){
-            var lines = $(this).text().split('\n').length - 1, widther='';
-            if (lines>99) {
-                widther = 'widther'
-            }
-            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
-            $(this).addClass('has-numbering ' + widther)
-                    .parent()
-                    .append($numbering);
-            for(var i=1;i<=lines;i++){
-                $numbering.append($('<li/>').text(i));
-            }
-        });
         
 
         /*访问数量*/
@@ -459,38 +930,6 @@
 </script>
 
 <!--加入行号的高亮代码块样式-->
-
-<style>
-    pre{
-        position: relative;
-        margin-bottom: 24px;
-        border-radius: 10px;
-        border: 1px solid #e2dede;
-        background: #FFF;
-        overflow: hidden;
-    }
-    code.has-numbering{
-        margin-left: 30px;
-    }
-    code.has-numbering.widther{
-        margin-left: 35px;
-    }
-    .pre-numbering{
-        margin: 0px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20px;
-        padding: 0.5em 3px 0.7em 5px;
-        border-right: 1px solid #C3CCD0;
-        text-align: right;
-        color: #AAA;
-        background-color: ;
-    }
-    .pre-numbering.widther {
-        width: 35px;
-    }
-</style>
 
 <!--自定义样式设置-->
 <style>
