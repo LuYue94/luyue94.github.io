@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content>
-  <meta name="description" content="Hexo">
+  <title>浏览器 HTTP | Hexo</title>
+  <meta name="keywords" content=" 浏览器 ">
+  <meta name="description" content="浏览器 HTTP | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="1、vue解决了什么问题2、MVVM的理解3、如何实现一个自定义组件，不同组件之间如何通信的？4、nextTick5、生命周期6、虚拟dom的原理7、双向绑定的原理？数据劫持？8、组件通信 父-&amp;gt;子子-&amp;gt;父非父子组件9、Proxy 相比于 defineProperty 的优势10、watch computed区别11、virtual dom 原理实现12、vue-router(hash">
 <meta name="keywords" content="Vue">
@@ -53,7 +53,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -304,12 +304,55 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-浏览器 http" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
+        <h1 class="article-title">浏览器 HTTP</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="前端">前端</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color4">浏览器</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-09-18 16:16:28'>2018-03-23 15:13</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器"><span class="toc-text">浏览器</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -322,36 +365,42 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
-</blockquote>
-<blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
-</blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
-<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
-<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/">Hexo</a> 生成，部署在 <a href="https://pages.github.com/">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
-<p>主要功能：</p>
-<ul>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad/手机等移动端适配</li>
-<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
-</ul>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p>1、输入url到展示页面过程发生了什么？<br>2、重绘与回流 重绘(repaint): 当元素样式的改变不影响布局时，浏览器将使用重绘对元素进行更新，此时由于只需要UI层面的重新像素绘制，因此 损耗较少回流(reflow): 当元素的尺寸、结构或触发某些属性时，浏览器会重新渲染页面，称为回流。此时，浏览器需要重新经过计算，计算后还需要重新页面布局，因此是较重的操作。会触发回流的操作:* 页面初次渲染* 浏览器窗口大小改变* 元素尺寸、位置、内容发生改变* 元素字体大小变化* 添加或者删除可见的 dom 元素* 激活 CSS 伪类（例如：:hover）* 查询某些属性或调用某些方法* clientWidth、clientHeight、clientTop、clientLeft* offsetWidth、offsetHeight、offsetTop、offsetLeft* scrollWidth、scrollHeight、scrollTop、scrollLeft* getComputedStyle()* getBoundingClientRect()* scrollTo()回流必定触发重绘，重绘不一定触发回流。重绘的开销较小，回流的代价较高。<br>3、防抖与节流<br>4、cookies、session、sessionStorage、localStorage<br>5、浏览器内核服务端与网络1、常见状态码2、缓存 200 From cache和200 ok400,401,403状态码分别代表什么浏览器缓存3、cookie, session, token4、前端持久化的方式、区别5、DNS是怎么解析的6、cdn7、计算机网络的相关协议<br>8、http/https/http2.0<br>9、get post区别<br>10、ajax、 axios库<br>11、tcp三次握手，四次挥手流程<br>12、跨域<br>13、前端安全XSS、CSRF<br>14、websocket<br>15、Http请求中的keep-alive有了解吗<br>16、网络分层<br>17、即时通信，除了Ajax和websocket<br>18、模块化，commonJS，es6，cmd，amd</p>
 
-        </article>
-        
-        <p>
-            <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 luyue94666@163.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>浏览器 HTTP</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Eifersucht">Eifersucht</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-03-23, 15:13:49</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-18, 16:16:28</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/03/23/浏览器 http/" title="浏览器 HTTP">http://luyue94.github.com/2018/03/23/浏览器 http/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2019 luyue94</p>
