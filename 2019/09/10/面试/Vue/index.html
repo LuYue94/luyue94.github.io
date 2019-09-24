@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>面试：Vue | Hexo</title>
+  <meta name="keywords" content=" Vue ">
+  <meta name="description" content="面试：Vue | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="2019&amp;#x65B0;&amp;#x7248;React&amp;#x5168;&amp;#x5BB6;&amp;#x6876;&amp;#x514D;&amp;#x8D39;&amp;#x89C6;&amp;#x9891;&amp;#xFF08;84&amp;#x96C6;&amp;#xFF09;https://juejin.im/post/5d817a15f265da039929a761">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TODO">
+<meta property="og:url" content="http://luyue94.github.com/2019/09/20/TODO/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019&amp;#x65B0;&amp;#x7248;React&amp;#x5168;&amp;#x5BB6;&amp;#x6876;&amp;#x514D;&amp;#x8D39;&amp;#x89C6;&amp;#x9891;&amp;#xFF08;84&amp;#x96C6;&amp;#xFF09;https://juejin.im/post/5d817a15f265da039929a761">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-20T09:34:19.832Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TODO">
+<meta name="twitter:description" content="2019&amp;#x65B0;&amp;#x7248;React&amp;#x5168;&amp;#x5BB6;&amp;#x6876;&amp;#x514D;&amp;#x8D39;&amp;#x89C6;&amp;#x9891;&amp;#xFF08;84&amp;#x96C6;&amp;#xFF09;https://juejin.im/post/5d817a15f265da039929a761">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>Eifersucht</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/luyue94" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:luyue94666@163.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=84285251&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(69)</small></div></li>
+    
+        
+            
+            <li><div data-rel="前端"><i class="fold iconfont icon-right"></i>前端<small>(38)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="ES6">ES6<small>(9)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="JavaScript">JavaScript<small>(17)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="面试">面试<small>(6)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Nodejs">Nodejs<small>(13)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="工具">工具<small>(7)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="后端">后端<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="算法">算法<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="69">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CSS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Node</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">前端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">React</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">移动端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">工具</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">JS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Vue</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="前端 "
+           href="/2018/03/23/CSS/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="CSS">CSS</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/20/TODO/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="TODO">TODO</span>
+            <span class="post-date" title="2019-09-20 14:57:00">2019/09/20</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Buffer/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Buffer">Buffer</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/EventEmitter/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="EventEmitter">EventEmitter</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Directory/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Node">Node</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/FileSystem/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="FileSystem">FileSystem</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/HTTP服务器/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Http服务器">Http服务器</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/module/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Module">Module</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Stream/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Stream">Stream</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/http模块/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Http模块">Http模块</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/基础笔记/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="基础笔记">基础笔记</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/node应用/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="应用">应用</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/process/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Process">Process</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/模块/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="模块">模块</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/HTML/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="HTML">HTML</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/ReactNative/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Navtive2">React Navtive2</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/ReactNative样式/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Native">React Native</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/浏览器 http/"
+           data-tag="浏览器"
+           data-author="" >
+            <span class="post-title" title="浏览器 HTTP">浏览器 HTTP</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/移动端/"
+           data-tag="移动端"
+           data-author="" >
+            <span class="post-title" title="移动端">移动端</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/emmet语法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="emmet">emmet</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="后端 "
+           href="/2018/03/23/后端/MongoDB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="MongoDB">MongoDB</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/markdown语法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Markdown">Markdown</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/scss和gulp-sass/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Gulp-sass">Gulp-sass</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/gulp+webpack配置/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="gulp+webpack的配置">gulp+webpack的配置</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/webpack/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Webpack">Webpack</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/博客搭建/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="博客搭建">博客搭建</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/工具/工具/"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="开发工具">开发工具</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/正则表达式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式">正则表达式</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/算法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="算法问题">算法问题</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/树与二叉树/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="树与二叉树">树与二叉树</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/算法排序/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="排序">排序</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/数据结构/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据结构">数据结构</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/JS/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="面试：JS">面试：JS</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/20/面试/深拷贝/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="深拷贝">深拷贝</span>
+            <span class="post-date" title="2019-09-20 14:39:02">2019/09/20</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/面试常见问题/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="面试常见问题">面试常见问题</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/阿里2017/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="2017暑期阿里面试总结(前端方向)">2017暑期阿里面试总结(前端方向)</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/Vue/"
+           data-tag="Vue"
+           data-author="" >
+            <span class="post-title" title="面试：Vue">面试：Vue</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6基础/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6基础">ES6基础</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6函数扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6函数扩展">ES6函数扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6正则表达式扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6正则表达式扩展">ES6正则表达式扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6数组扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6数组扩展">ES6数组扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/字符串/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6字符串">ES6字符串</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/let与const命令/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6let与const">ES6let与const</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/字符编码/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6字符编码">ES6字符编码</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/解构赋值/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6解构赋值">ES6解构赋值</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/HTML5/SVG/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="SVG">SVG</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/HTML5/本地存储/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="localStorage与sessionStorage">localStorage与sessionStorage</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/Ajax/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Ajax">Ajax</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/CommonJS/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="CommonJs">CommonJs</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/DOM样式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="DOM样式">DOM样式</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/DOM对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="DOM对象">DOM对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/JSON/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="JSON">JSON</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/JavaScript数值/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数值">数值</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/export、import与require/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="模块加载">模块加载</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/HTML网页API/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="浏览器API">浏览器API</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/webpack/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="webpack">webpack</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/Object对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Object对象">Object对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/npm/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="npm">npm</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/window对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Window对象">Window对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/标准对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="标准对象">标准对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/数组/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数组">数组</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/函数/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="函数">函数</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/移动端事件/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="移动端事件">移动端事件</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/面向对象编程/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="面向对象编程">面向对象编程</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/React1/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React1">React1</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/React2/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React2">React2</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/reactRouter/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Router">React Router</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6对象扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6对象扩展">ES6对象扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Express中文文档/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Express 4.x API">Express 4.x API</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-面试/Vue" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">面试：Vue</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="面试">面试</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color4">Vue</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-09-24 17:06:11'>2019-09-10 20:36</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要用vue，vue解决了什么问题"><span class="toc-text">为什么要用vue，vue解决了什么问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MVVM的理解"><span class="toc-text">MVVM的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#双向绑定原理"><span class="toc-text">双向绑定原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组件通信"><span class="toc-text">组件通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生命周期"><span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#双向数据绑定原理"><span class="toc-text">双向数据绑定原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue-js的template编译"><span class="toc-text">Vue.js的template编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nextTick"><span class="toc-text">nextTick</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Virtual-DOM"><span class="toc-text">Virtual DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-model"><span class="toc-text">v-model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mixin"><span class="toc-text">mixin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue-router"><span class="toc-text">vue-router</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vuex"><span class="toc-text">vuex</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Proxy-相比于-defineProperty-的优势"><span class="toc-text">Proxy 相比于 defineProperty 的优势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#watch-computed区别"><span class="toc-text">watch computed区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SEO"><span class="toc-text">SEO</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;vue&#xFF0C;vue&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;vue&#xFF0C;vue&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;vue&#xFF0C;vue&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;vue&#xFF0C;vue&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;</h2><p>&#x5F00;&#x53D1;&#x5355;&#x9875;&#x5E94;&#x7528;&#x5F00;&#x53D1;<br>&#x901A;&#x8FC7;vue-cli&#x65B9;&#x4FBF;&#x7684;&#x6784;&#x5EFA;&#x5F00;&#x53D1;&#x3001;&#x8C03;&#x8BD5;&#x73AF;&#x5883;<br>&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF0C;&#x5F00;&#x53D1;&#x66F4;&#x9AD8;&#x6548;<br>&#x7EC4;&#x4EF6;&#x5316;&#x5F00;&#x53D1;&#xFF0C;&#x63D0;&#x5347;&#x4EE3;&#x7801;&#x590D;&#x7528;&#x80FD;&#x529B;<br>Virtual DOM&#xFF0C;&#x63D0;&#x5347;&#x5E94;&#x7528;&#x7684;&#x6027;&#x80FD;<br>&#x6570;&#x636E;&#x9A71;&#x52A8;&#x5C31;&#x662F;&#x5F53;&#x6570;&#x636E;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7528;&#x6237;&#x754C;&#x9762;&#x53D1;&#x751F;&#x76F8;&#x5E94;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x4E0D;&#x9700;&#x8981;&#x624B;&#x52A8;&#x7684;&#x53BB;&#x4FEE;&#x6539;dom<br>ViewModel&#x8D1F;&#x8D23;&#x8FDE;&#x63A5; View &#x548C; Model&#xFF0C;&#x4FDD;&#x8BC1;&#x89C6;&#x56FE;&#x548C;&#x6570;&#x636E;&#x7684;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x8FD9;&#x79CD;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x67B6;&#x6784;&#x8BA9;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x66F4;&#x52A0;&#x9AD8;&#x6548;&#x3001;&#x4FBF;&#x6377;</p>
+<h2 id="MVVM&#x7684;&#x7406;&#x89E3;"><a href="#MVVM&#x7684;&#x7406;&#x89E3;" class="headerlink" title="MVVM&#x7684;&#x7406;&#x89E3;"></a>MVVM&#x7684;&#x7406;&#x89E3;</h2><p>Model-View-ViewModel<br>&#x6838;&#x5FC3;&#x662F;&#x63D0;&#x4F9B;&#x5BF9;View &#x548C; ViewModel &#x7684;&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;ViewModel &#x7684;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x4F20;&#x9012;&#x7ED9; View&#xFF0C;&#x5373;&#x6240;&#x8C13;&#x7684;&#x6570;&#x636E;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;</p>
+<p>&#x524D;&#x7AEF; MVC<br>View &#xFF1A;UI&#x5E03;&#x5C40;&#xFF0C;&#x5C55;&#x793A;&#x6570;&#x636E;<br>Model &#xFF1A;&#x7BA1;&#x7406;&#x6570;&#x636E;<br>Controller &#xFF1A;&#x54CD;&#x5E94;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x5C06; Model &#x66F4;&#x65B0;&#x5230; View &#x4E0A;</p>
+<p>&#x4F20;&#x7EDF;MVC&#x78B0;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1A;<br>1&#x3001; &#x5F00;&#x53D1;&#x8005;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x5927;&#x91CF;&#x8C03;&#x7528;&#x76F8;&#x540C;&#x7684; DOM API&#xFF0C;&#x5904;&#x7406;&#x7E41;&#x7410; &#xFF0C;&#x64CD;&#x4F5C;&#x5197;&#x4F59;&#xFF0C;&#x4F7F;&#x5F97;&#x4EE3;&#x7801;&#x96BE;&#x4EE5;&#x7EF4;&#x62A4;&#x3002;<br>2&#x3001;&#x5927;&#x91CF;&#x7684;DOM &#x64CD;&#x4F5C;&#x4F7F;&#x9875;&#x9762;&#x6E32;&#x67D3;&#x6027;&#x80FD;&#x964D;&#x4F4E;&#xFF0C;&#x52A0;&#x8F7D;&#x901F;&#x5EA6;&#x53D8;&#x6162;&#xFF0C;&#x5F71;&#x54CD;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x3002;<br>3&#x3001; &#x5F53; Model &#x9891;&#x7E41;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x4E3B;&#x52A8;&#x66F4;&#x65B0;&#x5230;View &#xFF1B;&#x5F53;&#x7528;&#x6237;&#x7684;&#x64CD;&#x4F5C;&#x5BFC;&#x81F4; Model &#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x540C;&#x6837;&#x9700;&#x8981;&#x5C06;&#x53D8;&#x5316;&#x7684;&#x6570;&#x636E;&#x540C;&#x6B65;&#x5230;Model &#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x5DE5;&#x4F5C;&#x4E0D;&#x4EC5;&#x7E41;&#x7410;&#xFF0C;&#x800C;&#x4E14;&#x5F88;&#x96BE;&#x7EF4;&#x62A4;&#x590D;&#x6742;&#x591A;&#x53D8;&#x7684;&#x6570;&#x636E;&#x72B6;&#x6001;&#x3002;</p>
+<p>MVVM &#x7531; Model&#x3001;View&#x3001;ViewModel &#x4E09;&#x90E8;&#x5206;&#x6784;&#x6210;<br>Model &#x5C42;&#x4EE3;&#x8868;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;Model&#x4E2D;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x4FEE;&#x6539;&#x548C;&#x64CD;&#x4F5C;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;<br>View &#x4EE3;&#x8868;UI &#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x8D1F;&#x8D23;&#x5C06;&#x6570;&#x636E;&#x6A21;&#x578B;&#x8F6C;&#x5316;&#x6210;UI &#x5C55;&#x73B0;&#x51FA;&#x6765;<br>ViewModel &#x662F;&#x4E00;&#x4E2A;&#x540C;&#x6B65;View &#x548C; Model&#x7684;&#x5BF9;&#x8C61;</p>
+<p>&#x5728;MVVM&#x67B6;&#x6784;&#x4E0B;&#xFF0C;View &#x548C; Model &#x4E4B;&#x95F4;&#x5E76;&#x6CA1;&#x6709;&#x76F4;&#x63A5;&#x7684;&#x8054;&#x7CFB;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;ViewModel&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;Model &#x548C; ViewModel &#x4E4B;&#x95F4;&#x7684;&#x4EA4;&#x4E92;&#x662F;&#x53CC;&#x5411;&#x7684;&#xFF0C; &#x56E0;&#x6B64;View &#x6570;&#x636E;&#x7684;&#x53D8;&#x5316;&#x4F1A;&#x540C;&#x6B65;&#x5230;Model&#x4E2D;&#xFF0C;&#x800C;Model &#x6570;&#x636E;&#x7684;&#x53D8;&#x5316;&#x4E5F;&#x4F1A;&#x7ACB;&#x5373;&#x53CD;&#x5E94;&#x5230;View &#x4E0A;&#x3002;</p>
+<p>ViewModel &#x901A;&#x8FC7;&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x628A; View &#x5C42;&#x548C; Model &#x5C42;&#x8FDE;&#x63A5;&#x4E86;&#x8D77;&#x6765;&#xFF0C;&#x800C;View &#x548C; Model &#x4E4B;&#x95F4;&#x7684;&#x540C;&#x6B65;&#x5DE5;&#x4F5C;&#x5B8C;&#x5168;&#x662F;&#x81EA;&#x52A8;&#x7684;&#xFF0C;&#x65E0;&#x9700;&#x4EBA;&#x4E3A;&#x5E72;&#x6D89;&#xFF0C;&#x56E0;&#x6B64;&#x5F00;&#x53D1;&#x8005;&#x53EA;&#x9700;&#x5173;&#x6CE8;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x624B;&#x52A8;&#x64CD;&#x4F5C;DOM&#xFF0C; &#x4E0D;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x6570;&#x636E;&#x72B6;&#x6001;&#x7684;&#x540C;&#x6B65;&#x95EE;&#x9898;&#xFF0C;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#x72B6;&#x6001;&#x7EF4;&#x62A4;&#x5B8C;&#x5168;&#x7531; MVVM &#x6765;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x3002;</p>
+<h2 id="&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x539F;&#x7406;"><a href="#&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x539F;&#x7406;" class="headerlink" title="&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x539F;&#x7406;"></a>&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x539F;&#x7406;</h2><p>Vue.js &#x662F;&#x91C7;&#x7528; Object.defineProperty &#x7684; getter &#x548C; setter&#xFF0C;&#x5E76;&#x7ED3;&#x5408;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x3002;&#x5F53;&#x628A;&#x4E00;&#x4E2A;&#x666E;&#x901A; Javascript &#x5BF9;&#x8C61;&#x4F20;&#x7ED9; Vue &#x5B9E;&#x4F8B;&#x6765;&#x4F5C;&#x4E3A;&#x5B83;&#x7684; data &#x9009;&#x9879;&#x65F6;&#xFF0C;Vue &#x5C06;&#x904D;&#x5386;&#x5B83;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x7528; Object.defineProperty &#x5C06;&#x5B83;&#x4EEC;&#x8F6C;&#x4E3A; getter/setter&#x3002;&#x7528;&#x6237;&#x770B;&#x4E0D;&#x5230; getter/setter&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5185;&#x90E8;&#x5B83;&#x4EEC;&#x8BA9; Vue &#x8FFD;&#x8E2A;&#x4F9D;&#x8D56;&#xFF0C;&#x5728;&#x5C5E;&#x6027;&#x88AB;&#x8BBF;&#x95EE;&#x548C;&#x4FEE;&#x6539;&#x65F6;&#x901A;&#x77E5;&#x53D8;&#x5316;&#x3002;</p>
+<p>Observer &#xFF1A;&#x6570;&#x636E;&#x76D1;&#x542C;&#x5668;&#xFF0C;&#x80FD;&#x591F;&#x5BF9;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x76D1;&#x542C;&#xFF0C;&#x5982;&#x6709;&#x53D8;&#x52A8;&#x53EF;&#x62FF;&#x5230;&#x6700;&#x65B0;&#x503C;&#x5E76;&#x901A;&#x77E5;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x5185;&#x90E8;&#x91C7;&#x7528;Object.defineProperty&#x7684;getter&#x548C;setter&#x6765;&#x5B9E;&#x73B0;<br>Compile  &#xFF1A;&#x6307;&#x4EE4;&#x89E3;&#x6790;&#x5668;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x5BF9;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x7684;&#x6307;&#x4EE4;&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x548C;&#x89E3;&#x6790;&#xFF0C;&#x6839;&#x636E;&#x6307;&#x4EE4;&#x6A21;&#x677F;&#x66FF;&#x6362;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x53CA;&#x7ED1;&#x5B9A;&#x76F8;&#x5E94;&#x7684;&#x66F4;&#x65B0;&#x51FD;&#x6570;<br>Watcher  &#xFF1A;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x4F5C;&#x4E3A;&#x8FDE;&#x63A5; Observer &#x548C; Compile &#x7684;&#x6865;&#x6881;&#xFF0C;&#x80FD;&#x591F;&#x8BA2;&#x9605;&#x5E76;&#x6536;&#x5230;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x53D8;&#x52A8;&#x7684;&#x901A;&#x77E5;&#xFF0C;&#x6267;&#x884C;&#x6307;&#x4EE4;&#x7ED1;&#x5B9A;&#x7684;&#x76F8;&#x5E94;&#x56DE;&#x8C03;&#x51FD;&#x6570;<br>Dep &#xFF1A;&#x6D88;&#x606F;&#x8BA2;&#x9605;&#x5668;&#xFF0C;&#x5185;&#x90E8;&#x7EF4;&#x62A4;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x7528;&#x6765;&#x6536;&#x96C6;&#x8BA2;&#x9605;&#x8005;&#xFF08;Watcher&#xFF09;&#xFF0C;&#x6570;&#x636E;&#x53D8;&#x52A8;&#x89E6;&#x53D1;notify &#x51FD;&#x6570;&#xFF0C;&#x518D;&#x8C03;&#x7528;&#x8BA2;&#x9605;&#x8005;&#x7684; update &#x65B9;&#x6CD5;<br>&#x3000;&#x3000;<br>&#x5F53;&#x6267;&#x884C; new Vue() &#x65F6;&#xFF0C;Vue &#x5C31;&#x8FDB;&#x5165;&#x4E86;&#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5;&#xFF0C;&#x4E00;&#x65B9;&#x9762;Vue &#x4F1A;&#x904D;&#x5386; data &#x9009;&#x9879;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x7528; Object.defineProperty &#x5C06;&#x5B83;&#x4EEC;&#x8F6C;&#x4E3A; getter/setter&#xFF0C;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x53D8;&#x5316;&#x76D1;&#x542C;&#x529F;&#x80FD;&#xFF1B;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;Vue &#x7684;&#x6307;&#x4EE4;&#x7F16;&#x8BD1;&#x5668;Compile &#x5BF9;&#x5143;&#x7D20;&#x8282;&#x70B9;&#x7684;&#x6307;&#x4EE4;&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x548C;&#x89E3;&#x6790;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x89C6;&#x56FE;&#xFF0C;&#x5E76;&#x8BA2;&#x9605; Watcher &#x6765;&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#xFF0C; &#x6B64;&#x65F6;Wather &#x4F1A;&#x5C06;&#x81EA;&#x5DF1;&#x6DFB;&#x52A0;&#x5230;&#x6D88;&#x606F;&#x8BA2;&#x9605;&#x5668;&#x4E2D;(Dep)&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6BD5;&#x3002;</p>
+<p>&#x5F53;&#x6570;&#x636E;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;Observer &#x4E2D;&#x7684; setter &#x65B9;&#x6CD5;&#x88AB;&#x89E6;&#x53D1;&#xFF0C;setter &#x4F1A;&#x7ACB;&#x5373;&#x8C03;&#x7528;Dep.notify()&#xFF0C;Dep &#x5F00;&#x59CB;&#x904D;&#x5386;&#x6240;&#x6709;&#x7684;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x5E76;&#x8C03;&#x7528;&#x8BA2;&#x9605;&#x8005;&#x7684; update &#x65B9;&#x6CD5;&#xFF0C;&#x8BA2;&#x9605;&#x8005;&#x6536;&#x5230;&#x901A;&#x77E5;&#x540E;&#x5BF9;&#x89C6;&#x56FE;&#x8FDB;&#x884C;&#x76F8;&#x5E94;&#x7684;&#x66F4;&#x65B0;&#x3002;</p>
+<h2 id="&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;"><a href="#&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;" class="headerlink" title="&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;"></a>&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;</h2><ul>
+<li>&#x901A;&#x8FC7;props&#x5411;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x6570;&#x636E;&#xFF1A;&#x7236; -&gt; &#x5B50;</li>
+<li>&#x901A;&#x8FC7;&#x4E8B;&#x4EF6;&#x5411;&#x7236;&#x7EC4;&#x4EF6;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF1A;&#x5B50; -&gt; &#x7236;&#xFF0C;&#x4F7F;&#x7528;$emit&#x53D1;&#x9001;&#x4E8B;&#x4EF6;</li>
+<li>&#x7236;&#x94FE; &#x548C; &#x5B50;&#x7D22;&#x5F15;&#xFF1A;this.$parent  &#x4E0E; this.$children</li>
+<li>&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#xFF1A;provide &#x548C; inject</li>
+<li>&#x5B50;&#x7EC4;&#x4EF6;&#x5F15;&#x7528;&#xFF1A; ref&#x4E0E;$refs</li>
+<li>&#x7279;&#x6027;&#x7ED1;&#x5B9A;&#xFF1A;v-bind=&#x201D;$attrs&#x201D; &#x548C; v-on=&#x201D;$listeners&#x201D;</li>
+<li>event bus</li>
+<li>&#x5229;&#x7528;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3001;storage&#x3001;cookie&#x3001;query&#x3001;hash&#x7B49;&#x4F20;&#x9012;&#x6570;&#x636E;: &#x975E;vue&#x7279;&#x6027;&#xFF0C;&#x4E0D;&#x505A;&#x8D58;&#x8FF0;&#x3002;</li>
+<li>&#x5168;&#x5C40;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;</li>
+</ul>
+<h2 id="&#x751F;&#x547D;&#x5468;&#x671F;"><a href="#&#x751F;&#x547D;&#x5468;&#x671F;" class="headerlink" title="&#x751F;&#x547D;&#x5468;&#x671F;"></a>&#x751F;&#x547D;&#x5468;&#x671F;</h2><p>vue&#x751F;&#x547D;&#x5468;&#x671F;&#x603B;&#x5171;&#x5206;&#x4E3A;8&#x4E2A;&#x9636;&#x6BB5;&#x521B;&#x5EFA;&#x524D;/&#x540E;&#xFF0C;&#x8F7D;&#x5165;&#x524D;/&#x540E;&#xFF0C;&#x66F4;&#x65B0;&#x524D;/&#x540E;&#xFF0C;&#x9500;&#x6BC1;&#x524D;/&#x540E;&#x3002;<br>&#x521B;&#x5EFA;&#x524D;/&#x540E;&#xFF1A;&#x5728;beforeCreated&#x9636;&#x6BB5;&#xFF0C;vue&#x5B9E;&#x4F8B;&#x7684;&#x6302;&#x8F7D;&#x5143;el&#x8FD8;&#x6CA1;&#x6709;&#x3002;<br>&#x8F7D;&#x5165;&#x524D;/&#x540E;&#xFF1A;&#x5728;beforeMount&#x9636;&#x6BB5;&#xFF0C;vue&#x5B9E;&#x4F8B;&#x7684;$el&#x548C;data&#x90FD;&#x521D;&#x59CB;&#x5316;&#x4E86;&#xFF0C;&#x4F46;&#x8FD8;&#x662F;&#x6302;&#x8F7D;&#x4E4B;&#x524D;&#x4E3A;&#x865A;&#x62DF;&#x7684;dom&#x8282;&#x70B9;&#xFF0C;data.message&#x8FD8;&#x672A;&#x66FF;&#x6362;&#x3002;&#x5728;mounted&#x9636;&#x6BB5;&#xFF0C;vue&#x5B9E;&#x4F8B;&#x6302;&#x8F7D;&#x5B8C;&#x6210;&#xFF0C;data.message&#x6210;&#x529F;&#x6E32;&#x67D3;&#x3002;<br>&#x66F4;&#x65B0;&#x524D;/&#x540E;&#xFF1A;&#x5F53;data&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;beforeUpdate&#x548C;updated&#x65B9;&#x6CD5;&#x3002;<br>&#x9500;&#x6BC1;&#x524D;/&#x540E;&#xFF1A;&#x5728;&#x6267;&#x884C;destroy&#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x5BF9;data&#x7684;&#x6539;&#x53D8;&#x4E0D;&#x4F1A;&#x518D;&#x89E6;&#x53D1;&#x5468;&#x671F;&#x51FD;&#x6570;&#xFF0C;&#x8BF4;&#x660E;&#x6B64;&#x65F6;vue&#x5B9E;&#x4F8B;&#x5DF2;&#x7ECF;&#x89E3;&#x9664;&#x4E86;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x4EE5;&#x53CA;&#x548C;dom&#x7684;&#x7ED1;&#x5B9A;&#xFF0C;&#x4F46;&#x662F;dom&#x7ED3;&#x6784;&#x4F9D;&#x7136;&#x5B58;&#x5728;&#x3002;</p>
+<h2 id="&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x539F;&#x7406;"><a href="#&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x539F;&#x7406;" class="headerlink" title="&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x539F;&#x7406;"></a>&#x53CC;&#x5411;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x539F;&#x7406;</h2><p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x9700;&#x8981;observe&#x7684;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x904D;&#x5386;&#xFF0C;&#x5305;&#x62EC;&#x5B50;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x90FD;&#x52A0;&#x4E0A; setter&#x548C;getter&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x7ED9;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x67D0;&#x4E2A;&#x503C;&#x8D4B;&#x503C;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;setter&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x80FD;&#x76D1;&#x542C;&#x5230;&#x4E86;&#x6570;&#x636E;&#x53D8;&#x5316;<br>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;compile&#x89E3;&#x6790;&#x6A21;&#x677F;&#x6307;&#x4EE4;&#xFF0C;&#x5C06;&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x66FF;&#x6362;&#x6210;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x521D;&#x59CB;&#x5316;&#x6E32;&#x67D3;&#x9875;&#x9762;&#x89C6;&#x56FE;&#xFF0C;&#x5E76;&#x5C06;&#x6BCF;&#x4E2A;&#x6307;&#x4EE4;&#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#x7ED1;&#x5B9A;&#x66F4;&#x65B0;&#x51FD;&#x6570;&#xFF0C;&#x6DFB;&#x52A0;&#x76D1;&#x542C;&#x6570;&#x636E;&#x7684;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x4E00;&#x65E6;&#x6570;&#x636E;&#x6709;&#x53D8;&#x52A8;&#xFF0C;&#x6536;&#x5230;&#x901A;&#x77E5;&#xFF0C;&#x66F4;&#x65B0;&#x89C6;&#x56FE;<br>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;Watcher&#x8BA2;&#x9605;&#x8005;&#x662F;Observer&#x548C;Compile&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x6865;&#x6881;&#xFF0C;&#x4E3B;&#x8981;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x662F;:1&#x3001;&#x5728;&#x81EA;&#x8EAB;&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#x5F80;&#x5C5E;&#x6027;&#x8BA2;&#x9605;&#x5668;(dep)&#x91CC;&#x9762;&#x6DFB;&#x52A0;&#x81EA;&#x5DF1;2&#x3001;&#x81EA;&#x8EAB;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;update()&#x65B9;&#x6CD5;3&#x3001;&#x5F85;&#x5C5E;&#x6027;&#x53D8;&#x52A8;dep.notice()&#x901A;&#x77E5;&#x65F6;&#xFF0C;&#x80FD;&#x8C03;&#x7528;&#x81EA;&#x8EAB;&#x7684;update()&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x89E6;&#x53D1;Compile&#x4E2D;&#x7ED1;&#x5B9A;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x5219;&#x529F;&#x6210;&#x8EAB;&#x9000;&#x3002;&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;MVVM&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x6574;&#x5408;Observer&#x3001;Compile&#x548C;Watcher&#x4E09;&#x8005;&#xFF0C;&#x901A;&#x8FC7;Observer&#x6765;&#x76D1;&#x542C;&#x81EA;&#x5DF1;&#x7684;model&#x6570;&#x636E;&#x53D8;&#x5316;&#xFF0C;&#x901A;&#x8FC7;Compile&#x6765;&#x89E3;&#x6790;&#x7F16;&#x8BD1;&#x6A21;&#x677F;&#x6307;&#x4EE4;&#xFF0C;&#x6700;&#x7EC8;&#x5229;&#x7528;Watcher&#x642D;&#x8D77;Observer&#x548C;Compile&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x6865;&#x6881;&#xFF0C;&#x8FBE;&#x5230;&#x6570;&#x636E;&#x53D8;&#x5316; -&gt; &#x89C6;&#x56FE;&#x66F4;&#x65B0;&#xFF1B;&#x89C6;&#x56FE;&#x4EA4;&#x4E92;&#x53D8;&#x5316;(input) -&gt; &#x6570;&#x636E;model&#x53D8;&#x66F4;&#x7684;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x6548;&#x679C;&#x3002;</p>
+<h2 id="Vue-js&#x7684;template&#x7F16;&#x8BD1;"><a href="#Vue-js&#x7684;template&#x7F16;&#x8BD1;" class="headerlink" title="Vue.js&#x7684;template&#x7F16;&#x8BD1;"></a>Vue.js&#x7684;template&#x7F16;&#x8BD1;</h2><p>&#x9996;&#x5148;&#xFF0C;&#x901A;&#x8FC7;compile&#x7F16;&#x8BD1;&#x5668;&#x628A;template&#x7F16;&#x8BD1;&#x6210;AST&#x8BED;&#x6CD5;&#x6811;&#xFF08;abstract syntax tree &#x5373; &#x6E90;&#x4EE3;&#x7801;&#x7684;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x7ED3;&#x6784;&#x7684;&#x6811;&#x72B6;&#x8868;&#x73B0;&#x5F62;&#x5F0F;&#xFF09;&#xFF0C;compile&#x662F;createCompiler&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;createCompiler&#x662F;&#x7528;&#x4EE5;&#x521B;&#x5EFA;&#x7F16;&#x8BD1;&#x5668;&#x7684;&#x3002;&#x53E6;&#x5916;compile&#x8FD8;&#x8D1F;&#x8D23;&#x5408;&#x5E76;option&#x3002;&#x7136;&#x540E;&#xFF0C;AST&#x4F1A;&#x7ECF;&#x8FC7;generate&#xFF08;&#x5C06;AST&#x8BED;&#x6CD5;&#x6811;&#x8F6C;&#x5316;&#x6210;render funtion&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x8FC7;&#x7A0B;&#xFF09;&#x5F97;&#x5230;render&#x51FD;&#x6570;&#xFF0C;render&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;VNode&#xFF0C;VNode&#x662F;Vue&#x7684;&#x865A;&#x62DF;DOM&#x8282;&#x70B9;&#xFF0C;&#x91CC;&#x9762;&#x6709;&#xFF08;&#x6807;&#x7B7E;&#x540D;&#x3001;&#x5B50;&#x8282;&#x70B9;&#x3001;&#x6587;&#x672C;&#x7B49;&#x7B49;&#xFF09;</p>
+<p>AST&#x2013;Render&#x2013;VNode</p>
+<h2 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h2><p>&#x5B9A;&#x4E49;&#xFF1A;&#x5728;&#x4E0B;&#x6B21; DOM &#x66F4;&#x65B0;&#x5FAA;&#x73AF;&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#x6267;&#x884C;&#x5EF6;&#x8FDF;&#x56DE;&#x8C03;&#x3002;&#x5728;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x4E4B;&#x540E;&#x7ACB;&#x5373;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x83B7;&#x53D6;&#x66F4;&#x65B0;&#x540E;&#x7684; DOM&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x7528;&#x5728;&#x64CD;&#x4F5C;&#x66F4;&#x65B0;&#x540E;&#x7684;DOM&#x65F6;&#x3002;</p>
+<p>Vue&#x662F;&#x5F02;&#x6B65;&#x6267;&#x884C;dom&#x66F4;&#x65B0;&#x7684;&#xFF0C;&#x4E00;&#x65E6;&#x89C2;&#x5BDF;&#x5230;&#x6570;&#x636E;&#x53D8;&#x5316;&#xFF0C;Vue&#x5C31;&#x4F1A;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF; (event loop) &#x5F53;&#x4E2D;&#x89C2;&#x5BDF;&#x5230;&#x6570;&#x636E;&#x53D8;&#x5316;&#x7684; watcher &#x63A8;&#x9001;&#x8FDB;&#x8FD9;&#x4E2A;&#x961F;&#x5217;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;watcher&#x88AB;&#x89E6;&#x53D1;&#x591A;&#x6B21;&#xFF0C;&#x53EA;&#x4F1A;&#x88AB;&#x63A8;&#x9001;&#x5230;&#x961F;&#x5217;&#x4E00;&#x6B21;&#x3002;&#x8FD9;&#x79CD;&#x7F13;&#x51B2;&#x884C;&#x4E3A;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x7684;&#x53BB;&#x6389;&#x91CD;&#x590D;&#x6570;&#x636E;&#x9020;&#x6210;&#x7684;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x8BA1;&#x7B97;&#x548C;DOm&#x64CD;&#x4F5C;&#x3002;&#x800C;&#x5728;&#x4E0B;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x65F6;&#xFF0C;Vue&#x4F1A;&#x6E05;&#x7A7A;&#x961F;&#x5217;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x5FC5;&#x8981;&#x7684;DOM&#x66F4;&#x65B0;&#x3002;</p>
+<p>&#x4F7F;&#x7528;Vue.nextTick(callback) &#x53EF;&#x4EE5;&#x786E;&#x4FDD;&#x5728;DOM &#x66F4;&#x65B0;&#x5B8C;&#x6210;&#x540E;&#x518D;&#x8FDB;&#x884C;DOM&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="Virtual-DOM"><a href="#Virtual-DOM" class="headerlink" title="Virtual DOM"></a>Virtual DOM</h2><p>&#x7528; JavaScript &#x5BF9;&#x8C61;&#x7ED3;&#x6784;&#x8868;&#x793A; DOM &#x6811;&#x7684;&#x7ED3;&#x6784;&#xFF1B;&#x7136;&#x540E;&#x7528;&#x8FD9;&#x4E2A;&#x6811;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x771F;&#x6B63;&#x7684; DOM &#x6811;&#xFF0C;&#x63D2;&#x5230;&#x6587;&#x6863;&#x5F53;&#x4E2D;&#x5F53;&#x72B6;&#x6001;&#x53D8;&#x66F4;&#x65F6;&#xFF0C;&#x91CD;&#x65B0;&#x6784;&#x9020;&#x4E00;&#x68F5;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x6811;&#x3002;&#x7136;&#x540E;&#x7528;&#x65B0;&#x7684;&#x6811;&#x548C;&#x65E7;&#x7684;&#x6811;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x6570;&#x7684;&#x5DEE;&#x5F02;&#x3002;&#x7136;&#x540E;&#x628A;&#x5DEE;&#x5F02;&#x66F4;&#x65B0;&#x5230;&#x4E45;&#x7684;&#x6811;&#x4E0A;&#xFF0C;&#x6574;&#x4E2A;&#x89C6;&#x56FE;&#x5C31;&#x66F4;&#x65B0;&#x4E86;&#x3002;Virtual DOM &#x672C;&#x8D28;&#x5C31;&#x662F;&#x5728; JS &#x548C; DOM &#x4E4B;&#x95F4;&#x505A;&#x4E86;&#x4E00;&#x4E2A;&#x7F13;&#x5B58;&#x3002;&#x65E2;&#x7136;&#x5DF2;&#x7ECF;&#x77E5;&#x9053; DOM &#x6162;&#xFF0C;&#x5C31;&#x5728; JS &#x548C; DOM &#x4E4B;&#x95F4;&#x52A0;&#x4E2A;&#x7F13;&#x5B58;&#x3002;JS &#x5148;&#x64CD;&#x4F5C; Virtual DOM &#x5BF9;&#x6BD4;&#x6392;&#x5E8F;/&#x53D8;&#x66F4;&#xFF0C;&#x6700;&#x540E;&#x518D;&#x628A;&#x6574;&#x4E2A;&#x53D8;&#x66F4;&#x5199;&#x5165;&#x771F;&#x5B9E; DOM&#x3002;</p>
+<p>DOM &#x64CD;&#x4F5C; &#x771F;&#x6B63;&#x7684;&#x95EE;&#x9898;&#x5728;&#x4E8E;&#x6BCF;&#x6B21;&#x64CD;&#x4F5C;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;&#x5E03;&#x5C40;&#x7684;&#x6539;&#x53D8;&#x3001;DOM&#x6811;&#x7684;&#x4FEE;&#x6539;&#x548C;&#x6E32;&#x67D3;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5F53;&#x4F60;&#x4E00;&#x4E2A;&#x63A5;&#x4E00;&#x4E2A;&#x5730;&#x53BB;&#x4FEE;&#x6539;30&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x5F15;&#x8D77;30&#x6B21;&#xFF08;&#x6F5C;&#x5728;&#x7684;&#xFF09;&#x5E03;&#x5C40;&#x91CD;&#x7B97;&#xFF0C;30&#x6B21;&#xFF08;&#x6F5C;&#x5728;&#x7684;&#xFF09;&#x91CD;&#x7ED8;&#xFF0C;&#x7B49;&#x7B49;&#x3002;<br>Virtual DOM &#x5B9E;&#x9645;&#x4E0A;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x5168;&#x65B0;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x628A; &#x201C; &#x53CC;&#x7F13;&#x51B2;&#xFF08;double buffering&#xFF09;&#x201D; &#x6280;&#x672F;&#x5E94;&#x7528;&#x5230;&#x4E86;DOM&#x4E0A;&#x9762;&#x3002;<br>&#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x5F53;&#x4F60;&#x5728;&#x8FD9;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x865A;&#x62DF;&#x7684;DOM&#x6811;&#x4E0A;&#x4E5F;&#x4E00;&#x4E2A;&#x63A5;&#x4E00;&#x4E2A;&#x5730;&#x4FEE;&#x6539;30&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x4E0D;&#x4F1A;&#x6BCF;&#x6B21;&#x90FD;&#x53BB;&#x89E6;&#x53D1;&#x91CD;&#x7ED8;&#xFF0C;&#x6240;&#x4EE5;&#x4FEE;&#x6539;&#x8282;&#x70B9;&#x7684;&#x5F00;&#x9500;&#x5C31;&#x53D8;&#x5C0F;&#x4E86;&#x3002;<br>&#x4E4B;&#x540E;&#xFF0C;&#x4E00;&#x65E6;&#x4F60;&#x8981;&#x628A;&#x8FD9;&#x4E9B;&#x6539;&#x52A8;&#x4F20;&#x9012;&#x7ED9;&#x771F;&#x5B9E;DOM&#xFF0C;&#x4E4B;&#x524D;&#x6240;&#x6709;&#x7684;&#x6539;&#x52A8;&#x5C31;&#x4F1A;&#x6574;&#x5408;&#x6210;&#x4E00;&#x6B21;DOM&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x4E00;&#x6B21;DOM&#x64CD;&#x4F5C;&#x5F15;&#x8D77;&#x7684;&#x5E03;&#x5C40;&#x8BA1;&#x7B97;&#x548C;&#x91CD;&#x7ED8;&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x5927;&#xFF0C;&#x4F46;&#x662F;&#x76F8;&#x6BD4;&#x800C;&#x8A00;&#xFF0C;&#x6574;&#x5408;&#x8D77;&#x6765;&#x7684;&#x6539;&#x52A8;&#x53EA;&#x505A;&#x4E00;&#x6B21;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#xFF08;&#x591A;&#x6B21;&#xFF09;&#x8BA1;&#x7B97;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x4E0D;&#x501F;&#x52A9;Virtual DOM&#x4E5F;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x8FD9;&#x4E00;&#x70B9;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x5730;&#x6574;&#x5408;&#x6240;&#x6709;&#x7684;DOM&#x64CD;&#x4F5C;&#x5230;&#x4E00;&#x4E2A;DOM &#x788E;&#x7247;&#xFF08;DOM fragment&#xFF09; &#x91CC;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x4F20;&#x9012;&#x7ED9;DOM&#x6811;&#x3002;</p>
+<p>&#x65E2;&#x7136;&#x5982;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x6765;&#x770B;&#x770B;Virtual DOM&#x5230;&#x5E95;&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x3002;<br>&#x9996;&#x5148;&#xFF0C;&#x5B83;&#x628A;&#x7BA1;&#x7406;DOM&#x788E;&#x7247;&#x8FD9;&#x4EF6;&#x4E8B;&#x60C5;&#x81EA;&#x52A8;&#x5316;&#x3001;&#x62BD;&#x8C61;&#x5316;&#x4E86;&#xFF0C;&#x4F7F;&#x5F97;&#x4F60;&#x65E0;&#x9700;&#x518D;&#x53BB;&#x624B;&#x52A8;&#x5904;&#x7406;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5F53;&#x4F60;&#x8981;&#x624B;&#x52A8;&#x53BB;&#x505A;&#x8FD9;&#x4EF6;&#x4E8B;&#x60C5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x8FD8;&#x5F97;&#x8BB0;&#x5F97;&#x54EA;&#x4E9B;&#x90E8;&#x5206;&#x53D8;&#x5316;&#x4E86;&#xFF0C;&#x54EA;&#x4E9B;&#x90E8;&#x5206;&#x6CA1;&#x53D8;&#xFF0C;&#x6BD5;&#x7ADF;&#x4E4B;&#x540E;&#x91CD;&#x7ED8;&#x65F6;&#xFF0C;DOM&#x6811;&#x4E0A;&#x7684;&#x5927;&#x91CF;&#x7EC6;&#x8282;&#x4F60;&#x90FD;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x5237;&#x65B0;&#x3002;&#x8FD9;&#x65F6;&#x5019;Virtual DOM&#x7684;&#x81EA;&#x52A8;&#x5316;&#x5BF9;&#x4F60;&#x6765;&#x8BF4;&#x5C31;&#x975E;&#x5E38;&#x6709;&#x7528;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x7684;&#x5B9E;&#x73B0;&#x662F;&#x6B63;&#x786E;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C31;&#x4F1A;&#x77E5;&#x9053;&#x5230;&#x5E95;&#x54EA;&#x4E9B;&#x5730;&#x65B9;&#x5E94;&#x8BE5;&#x9700;&#x8981;&#x5237;&#x65B0;&#xFF0C;&#x54EA;&#x4E9B;&#x5730;&#x65B9;&#x4E0D;&#x8981;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;Virtual DOM&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x7EC4;&#x4EF6;&#x548C;&#x4F60;&#x5199;&#x7684;&#x4E00;&#x4E9B;&#x4EE3;&#x7801;&#x6765;&#x8BF7;&#x6C42;&#x5BF9;&#x5B83;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x5BF9;&#x5B83;&#x672C;&#x8EAB;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x4F7F;&#x4F60;&#x4E0D;&#x5FC5;&#x975E;&#x8981;&#x8DDF;Virtual DOM&#x4EA4;&#x4E92;&#xFF0C;&#x4E5F;&#x4E0D;&#x5FC5;&#x975E;&#x8981;&#x53BB;&#x4E86;&#x89E3;Virtual DOM&#x4FEE;&#x6539;DOM&#x6811;&#x7684;&#x539F;&#x7406;&#xFF0C;&#x4E5F;&#x5C31;&#x4E0D;&#x7528;&#x518D;&#x60F3;&#x7740;&#x53BB;&#x4FEE;&#x6539;DOM&#x4E86;&#x3002;&#xFF08;&#x8BD1;&#x6CE8;&#xFF1A;&#x5BF9;&#x5F00;&#x53D1;&#x8005;&#x6765;&#x8BF4;&#xFF0C;Virtual DOM&#x51E0;&#x4E4E;&#x662F;&#x5B8C;&#x5168;&#x900F;&#x660E;&#x7684;&#xFF09;&#x3002;&#x8FD9;&#x6837;&#x4F60;&#x5C31;&#x4E0D;&#x7528;&#x5728; &#x4FEE;&#x6539;DOM &#x548C; &#x6574;&#x5408;DOM&#x64CD;&#x4F5C;&#x4E3A;&#x4E00;&#x6B21; &#x4E4B;&#x95F4;&#x505A;&#x540C;&#x6B65;&#x5904;&#x7406;&#x4E86;&#x3002;</p>
+<h2 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h2><p>&#x8BED;&#x6CD5;&#x7CD6;</p>
+<pre><code class="js">v-model=&quot;message&quot;
+
+// &#x7B49;&#x540C;&#x4E8E;
+// &#x5728;&#x539F;&#x751F;&#x8868;&#x5355;&#x5143;&#x7D20;&#x4E2D;
+:value=&quot;message&quot;
+@input=&quot;message = $event.target.value&quot;
+
+// &#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;
+:value=&quot;message&quot;
+@input=&quot;message = arguments[0]&quot;
+// &#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x9700;&#x8981;emit&#x53BB;&#x89E6;&#x53D1;input&#x4E8B;&#x4EF6;
+this.$emit(&apos;input&apos;, value)</code></pre>
+<h2 id="mixin"><a href="#mixin" class="headerlink" title="mixin"></a>mixin</h2><p>&#x5408;&#x5E76;&#x7B56;&#x7565;&#xFF1A;<br>&#x540C;&#x540D;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x5C06;&#x6DF7;&#x5408;&#x4E3A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x4E14;&#x90FD;&#x5C06;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#x7684;&#x94A9;&#x5B50;&#x5C06;&#x5728;&#x7EC4;&#x4EF6;&#x81EA;&#x8EAB;&#x94A9;&#x5B50; &#x4E4B;&#x524D;&#x8C03;&#x7528;&#x3002;<br>&#x503C;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x9009;&#x9879;&#xFF0C;&#x4F8B;&#x5982; methods, components &#x548C; directives&#xFF0C;&#x88AB;&#x6DF7;&#x5408;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002; &#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x952E;&#x540D;&#x51B2;&#x7A81;&#xFF0C;&#x53D6; &#x7EC4;&#x4EF6; &#x5BF9;&#x8C61;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x3002;</p>
+<p><strong>&#x8C28;&#x614E;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x6DF7;&#x5408;&#x5BF9;&#x8C61;&#xFF0C;&#x56E0;&#x4E3A;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x6BCF;&#x4E2A;&#x5355;&#x72EC;&#x521B;&#x5EFA;&#x7684; Vue &#x5B9E;&#x4F8B;&#xFF08;&#x5305;&#x62EC;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x677F;&#xFF09;&#x3002;</strong></p>
+<h2 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h2><p>Hash&#x6A21;&#x5F0F;<br>vue-router &#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;&#x662F; hash &#x6A21;&#x5F0F; &#x2014;&#x2014; &#x4F7F;&#x7528; URL &#x7684; hash &#x6765;&#x6A21;&#x62DF;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684; URL&#xFF0C;&#x5F53; URL &#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x9875;&#x9762;&#x4E0D;&#x4F1A;&#x53BB;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x3002;<br>hash&#xFF08;#&#xFF09;&#x662F;URL &#x7684;&#x951A;&#x70B9;&#xFF0C;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x7F51;&#x9875;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x5355;&#x5355;&#x6539;&#x53D8;#&#x540E;&#x7684;&#x90E8;&#x5206;&#xFF08;/#/..&#xFF09;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x53EA;&#x4F1A;&#x52A0;&#x8F7D;&#x76F8;&#x5E94;&#x4F4D;&#x7F6E;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x7F51;&#x9875;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4; #&#x662F;&#x7528;&#x6765;&#x6307;&#x5BFC;&#x6D4F;&#x89C8;&#x5668;&#x52A8;&#x4F5C;&#x7684;&#xFF0C;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x5B8C;&#x5168;&#x65E0;&#x7528;&#xFF0C;HTTP&#x8BF7;&#x6C42;&#x4E2D;&#x4E0D;&#x5305;&#x62EC;#&#xFF1B;&#x540C;&#x65F6;&#x6BCF;&#x4E00;&#x6B21;&#x6539;&#x53D8;#&#x540E;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x90FD;&#x4F1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8BBF;&#x95EE;&#x5386;&#x53F2;&#x4E2D;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#xFF0C;&#x4F7F;&#x7528;&#x201D;&#x540E;&#x9000;&#x201D;&#x6309;&#x94AE;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF1B;&#x6240;&#x4EE5;&#x8BF4;Hash&#x6A21;&#x5F0F;&#x901A;&#x8FC7;&#x951A;&#x70B9;&#x503C;&#x7684;&#x6539;&#x53D8;&#xFF0C;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF0C;&#x6E32;&#x67D3;&#x6307;&#x5B9A;DOM&#x4F4D;&#x7F6E;&#x7684;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x3002;</p>
+<p>History&#x6A21;&#x5F0F;<br>HTML5 History API&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x529F;&#x80FD;&#xFF0C;&#x80FD;&#x8BA9;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5728;&#x4E0D;&#x5237;&#x65B0;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4FEE;&#x6539;&#x7AD9;&#x70B9;&#x7684;URL&#xFF0C;&#x5C31;&#x662F;&#x5229;&#x7528; history.pushState API &#x6765;&#x5B8C;&#x6210; URL &#x8DF3;&#x8F6C;&#x800C;&#x65E0;&#x987B;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x9875;&#x9762;&#xFF1B;<br>&#x7531;&#x4E8E;hash&#x6A21;&#x5F0F;&#x4F1A;&#x5728;url&#x4E2D;&#x81EA;&#x5E26;#&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x8981;&#x5F88;&#x4E11;&#x7684; hash&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x8DEF;&#x7531;&#x7684; history &#x6A21;&#x5F0F;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;&#x914D;&#x7F6E;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x65F6;&#xFF0C;&#x52A0;&#x5165;&#x201D;mode: &#x2018;history&#x2019;&#x201D;,&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x5145;&#x5206;&#x5229;&#x7528; history.pushState API &#x6765;&#x5B8C;&#x6210; URL &#x8DF3;&#x8F6C;&#x800C;&#x65E0;&#x987B;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x9875;&#x9762;&#x3002;</p>
+<h2 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h2><p>&#x521D;&#x59CB;&#x5316;&#xFF1A;<br>vuex&#x5229;&#x7528;&#x4E86;vue&#x7684;mixin&#x673A;&#x5236;&#xFF0C;&#x5168;&#x5C40;&#x6DF7;&#x5408; beforeCreate &#x94A9;&#x5B50;&#xFF0C;&#x7531;&#x4E8E;mixin&#x7684;&#x7279;&#x6027;&#xFF0C;vuex&#x7684;beforeCreate&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#x81EA;&#x8EAB;&#x7684;beforeCreate&#x4E4B;&#x524D;&#x8C03;&#x7528;&#xFF0C;&#x5F53;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x5316;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x4F1A;&#x5148;&#x8C03;&#x7528;vuexInit &#x65B9;&#x6CD5;&#xFF0C;&#x5C06;store &#x7ED1;&#x5B9A;&#x5230;this.$options &#x5BF9;&#x8C61;&#x4E0A;&#x3002;</p>
+<p>&#x770B;&#x6E90;&#x7801;&#x53EF;&#x77E5;&#xFF1A;<br>&#x5176;&#x8BBE;&#x8BA1;&#x601D;&#x60F3;&#x4E0E;vue&#x4E2D;&#x592E;&#x4E8B;&#x4EF6;&#x603B;&#x7EBF;&#x5982;&#x51FA;&#x4E00;&#x8F99;</p>
+<h2 id="Proxy-&#x76F8;&#x6BD4;&#x4E8E;-defineProperty-&#x7684;&#x4F18;&#x52BF;"><a href="#Proxy-&#x76F8;&#x6BD4;&#x4E8E;-defineProperty-&#x7684;&#x4F18;&#x52BF;" class="headerlink" title="Proxy &#x76F8;&#x6BD4;&#x4E8E; defineProperty &#x7684;&#x4F18;&#x52BF;"></a>Proxy &#x76F8;&#x6BD4;&#x4E8E; defineProperty &#x7684;&#x4F18;&#x52BF;</h2><p>Object.defineProperty&#x7F3A;&#x9677;<br>1.&#x65E0;&#x6CD5;&#x76D1;&#x542C;&#x6570;&#x7EC4;&#x53D8;&#x5316;&#xFF0C;vue&#x4E2D;hack&#x5B9E;&#x73B0;&#x4E00;&#x90E8;&#x5206;&#x529F;&#x80FD;&#x3002;<br>2.&#x53EA;&#x80FD;&#x52AB;&#x6301;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x5C5E;&#x6027;&#x503C;&#x4E5F;&#x662F;&#x5BF9;&#x8C61;&#x90A3;&#x4E48;&#x9700;&#x8981;&#x6DF1;&#x5EA6;&#x904D;&#x5386;</p>
+<p>Proxy&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x76D1;&#x542C;&#x5BF9;&#x8C61;&#x800C;&#x975E;&#x5C5E;&#x6027;<br>Proxy&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x76D1;&#x542C;&#x6570;&#x7EC4;&#x7684;&#x53D8;&#x5316;<br>&#x52A3;&#x52BF;&#xFF1A;&#x517C;&#x5BB9;&#x6027;&#x5DEE;</p>
+<h2 id="watch-computed&#x533A;&#x522B;"><a href="#watch-computed&#x533A;&#x522B;" class="headerlink" title="watch computed&#x533A;&#x522B;"></a>watch computed&#x533A;&#x522B;</h2><p>watch&#x652F;&#x6301;&#x5F02;&#x6B65;&#xFF0C;computed&#x4E0D;&#x652F;&#x6301;,&#x540C;&#x65F6;watch&#x91CC;&#x9762;&#x7684;&#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x503C;&#x3002;&#x5206;&#x522B;&#x4E3A;&#x53D8;&#x5316;&#x524D;&#x548C;&#x53D8;&#x5316;&#x540E;&#x7684;&#x503C;,computed&#x4E2D;&#x53EA;&#x8981;&#x4F9D;&#x8D56;&#x7684;&#x503C;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x4FBF;&#x4F1A;&#x91CD;&#x66F4;&#x65B0;&#x8BA1;&#x7B97;</p>
+<h2 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h2><p>vue ssr<br><a href="https://ssr.vuejs.org/zh/guide/non-node.html" target="_blank" rel="noopener">https://ssr.vuejs.org/zh/guide/non-node.html</a></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 luyue94666@163.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>面试：Vue</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Eifersucht">Eifersucht</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-09-10, 20:36:20</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-24, 17:06:11</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/09/10/面试/Vue/" title="面试：Vue">http://luyue94.github.com/2019/09/10/面试/Vue/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 luyue94</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#CSS','#Node','#前端','#React','#浏览器','#移动端','#工具','#JS','#Vue',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+    .post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>

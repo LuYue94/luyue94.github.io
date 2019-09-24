@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>Http服务器 | Hexo</title>
+  <meta name="keywords" content=" Node ">
+  <meta name="description" content="Http服务器 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="2019&amp;#x65B0;&amp;#x7248;React&amp;#x5168;&amp;#x5BB6;&amp;#x6876;&amp;#x514D;&amp;#x8D39;&amp;#x89C6;&amp;#x9891;&amp;#xFF08;84&amp;#x96C6;&amp;#xFF09;https://juejin.im/post/5d817a15f265da039929a761">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TODO">
+<meta property="og:url" content="http://luyue94.github.com/2019/09/20/TODO/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019&amp;#x65B0;&amp;#x7248;React&amp;#x5168;&amp;#x5BB6;&amp;#x6876;&amp;#x514D;&amp;#x8D39;&amp;#x89C6;&amp;#x9891;&amp;#xFF08;84&amp;#x96C6;&amp;#xFF09;https://juejin.im/post/5d817a15f265da039929a761">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-20T09:34:19.832Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TODO">
+<meta name="twitter:description" content="2019&amp;#x65B0;&amp;#x7248;React&amp;#x5168;&amp;#x5BB6;&amp;#x6876;&amp;#x514D;&amp;#x8D39;&amp;#x89C6;&amp;#x9891;&amp;#xFF08;84&amp;#x96C6;&amp;#xFF09;https://juejin.im/post/5d817a15f265da039929a761">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>Eifersucht</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/luyue94" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:luyue94666@163.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=84285251&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(69)</small></div></li>
+    
+        
+            
+            <li><div data-rel="前端"><i class="fold iconfont icon-right"></i>前端<small>(38)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="ES6">ES6<small>(9)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="JavaScript">JavaScript<small>(17)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="面试">面试<small>(6)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Nodejs">Nodejs<small>(13)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="工具">工具<small>(7)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="后端">后端<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="算法">算法<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="69">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CSS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Node</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">前端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">React</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">移动端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">工具</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">JS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Vue</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="前端 "
+           href="/2018/03/23/CSS/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="CSS">CSS</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/20/TODO/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="TODO">TODO</span>
+            <span class="post-date" title="2019-09-20 14:57:00">2019/09/20</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Buffer/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Buffer">Buffer</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/EventEmitter/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="EventEmitter">EventEmitter</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Directory/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Node">Node</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/FileSystem/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="FileSystem">FileSystem</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/HTTP服务器/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Http服务器">Http服务器</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/module/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Module">Module</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Stream/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Stream">Stream</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/http模块/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Http模块">Http模块</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/基础笔记/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="基础笔记">基础笔记</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/node应用/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="应用">应用</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/process/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Process">Process</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/模块/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="模块">模块</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/HTML/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="HTML">HTML</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/ReactNative/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Navtive2">React Navtive2</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/ReactNative样式/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Native">React Native</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/浏览器 http/"
+           data-tag="浏览器"
+           data-author="" >
+            <span class="post-title" title="浏览器 HTTP">浏览器 HTTP</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/移动端/"
+           data-tag="移动端"
+           data-author="" >
+            <span class="post-title" title="移动端">移动端</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/emmet语法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="emmet">emmet</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="后端 "
+           href="/2018/03/23/后端/MongoDB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="MongoDB">MongoDB</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/markdown语法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Markdown">Markdown</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/scss和gulp-sass/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Gulp-sass">Gulp-sass</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/gulp+webpack配置/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="gulp+webpack的配置">gulp+webpack的配置</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/webpack/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Webpack">Webpack</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/博客搭建/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="博客搭建">博客搭建</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/工具/工具/"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="开发工具">开发工具</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/正则表达式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式">正则表达式</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/算法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="算法问题">算法问题</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/树与二叉树/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="树与二叉树">树与二叉树</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/算法排序/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="排序">排序</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/数据结构/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据结构">数据结构</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/JS/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="面试：JS">面试：JS</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/20/面试/深拷贝/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="深拷贝">深拷贝</span>
+            <span class="post-date" title="2019-09-20 14:39:02">2019/09/20</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/面试常见问题/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="面试常见问题">面试常见问题</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/阿里2017/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="2017暑期阿里面试总结(前端方向)">2017暑期阿里面试总结(前端方向)</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/Vue/"
+           data-tag="Vue"
+           data-author="" >
+            <span class="post-title" title="面试：Vue">面试：Vue</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6基础/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6基础">ES6基础</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6函数扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6函数扩展">ES6函数扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6正则表达式扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6正则表达式扩展">ES6正则表达式扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6数组扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6数组扩展">ES6数组扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/字符串/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6字符串">ES6字符串</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/let与const命令/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6let与const">ES6let与const</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/字符编码/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6字符编码">ES6字符编码</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/解构赋值/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6解构赋值">ES6解构赋值</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/HTML5/SVG/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="SVG">SVG</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/HTML5/本地存储/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="localStorage与sessionStorage">localStorage与sessionStorage</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/Ajax/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Ajax">Ajax</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/CommonJS/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="CommonJs">CommonJs</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/DOM样式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="DOM样式">DOM样式</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/DOM对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="DOM对象">DOM对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/JSON/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="JSON">JSON</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/JavaScript数值/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数值">数值</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/export、import与require/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="模块加载">模块加载</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/HTML网页API/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="浏览器API">浏览器API</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/webpack/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="webpack">webpack</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/Object对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Object对象">Object对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/npm/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="npm">npm</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/window对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Window对象">Window对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/标准对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="标准对象">标准对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/数组/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数组">数组</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/函数/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="函数">函数</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/移动端事件/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="移动端事件">移动端事件</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/面向对象编程/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="面向对象编程">面向对象编程</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/React1/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React1">React1</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/React2/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React2">React2</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/reactRouter/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Router">React Router</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6对象扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6对象扩展">ES6对象扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Express中文文档/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Express 4.x API">Express 4.x API</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-Nodejs/HTTP服务器" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Http服务器</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="Nodejs">Nodejs</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">Node</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-09-19 14:29:29'>2018-06-28 16:03</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器流程"><span class="toc-text">服务器流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建服务器"><span class="toc-text">创建服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由转换"><span class="toc-text">路由转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速创建服务器"><span class="toc-text">快速创建服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令行操作"><span class="toc-text">命令行操作</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="&#x670D;&#x52A1;&#x5668;&#x6D41;&#x7A0B;"><a href="#&#x670D;&#x52A1;&#x5668;&#x6D41;&#x7A0B;" class="headerlink" title="&#x670D;&#x52A1;&#x5668;&#x6D41;&#x7A0B;"></a>&#x670D;&#x52A1;&#x5668;&#x6D41;&#x7A0B;</h2><ol>
+<li>&#x7528;&#x6237;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x4E00;&#x4E2A;http&#x7684;&#x8BF7;&#x6C42;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x63A5;&#x6536;&#x5230;&#x8BE5;&#x8BF7;&#x6C42;&#xFF0C;&#x5BF9;&#x8BE5;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x548C;&#x5904;&#x7406;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x5230;&#x7528;&#x6237;&#x673A;&#x5668;</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x63A5;&#x6536;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x63A5;&#x6536;&#x5230;&#x7684;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x548C;&#x5904;&#x7406;</li>
+</ol>
+<p>&#x5BA2;&#x6237;&#x7AEF;  ==&#x300B;&#x300B;  &#x670D;&#x52A1;&#x7AEF;</p>
+<p>&#x7531;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x4E00;&#x4E2A;http&#x8BF7;&#x6C42;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x7AEF; -&gt; &#x670D;&#x52A1;&#x7AEF;&#x63A5;&#x6536;&#x5E76;&#x5904;&#x7406;&#x8BF7;&#x6C42; -&gt; &#x8FD4;&#x56DE;&#x6570;&#x636E;&#x5230;&#x5BA2;&#x6237;&#x7AEF;</p>
+<h2 id="&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;"><a href="#&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;" class="headerlink" title="&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;"></a>&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;</h2><pre><code class="js">//hello.js
+var http = require(&apos;http&apos;);
+var server = http.createServer(function (req, res) {
+    res.writeHead(200, {&apos;Content-Type&apos;: &apos;text/plain&apos;});
+    res.end(&apos;Hello, Node!\n&apos;);
+});
+server.listen(1337, &apos;127.0.0.1&apos;);</code></pre>
+<pre><code>node hello.js //&#x5728;&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;&#x8FD9;&#x4E2A;&#x811A;&#x672C;</code></pre><p>&#x5982;&#x679C;&#x8981;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x7684;HTML&#x5185;&#x5BB9;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>fs</code>&#x6A21;&#x5757;&#x8BFB;&#x53D6;<code>index.html</code>&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#xFF1A;</p>
+<pre><code class="js">//hello.js
+var http = require(&apos;http&apos;);
+var fs = require(&apos;fs&apos;);
+var server = http.createServer(function (req, res) {
+    res.writeHead(200, {&apos;Content-Type&apos;: &apos;text/html&apos;});
+    var html = fs.readFileSync(__dirname + &apos;/index.html&apos;).toString();
+    res.end(html);
+});
+server.listen(1337, &apos;127.0.0.1&apos;);</code></pre>
+<pre><code class="js">//&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;
+var http=require(&apos;http&apos;);
+var url=require(&apos;url&apos;);
+var fs=require(&apos;fs&apos;);
+http.createServer(function(req,res){
+    var urlObj=url.parse(req.url);
+    var pathname=urlObj.pathname;
+    var query=urlObj.query;
+
+    if(pathname===&apos;/&apos;){
+        readFileAndResponse(&apos;index.html&apos;,res);
+    }else if(pathname === &apos;/ajax&apos;){
+        res.end(&apos;&quot;msg&quot;:&quot;this is is json response&quot;&apos;);
+    }else{
+        readFileAndResponse(pathname,res);
+    }
+}).listen(8080);
+
+function readFileAndResponse(pathname,response){
+    fs.readFile(pathname.substr(1),&apos;utf-8&apos;,function(err,data){
+        if (err) {
+            response.writeHead(404);
+            response.end(&apos;file not found&apos;);
+        }else{
+            response.end(data);
+        }
+
+    });
+}
+</code></pre>
+<p><code>fs</code>&#x662F;NodeJS&#x63D0;&#x4F9B;&#x7684;&#x6807;&#x51C6;&#x5E93;&#xFF0C;&#x5C01;&#x88C5;&#x4E86;&#x5404;&#x7C7B;&#x6587;&#x4EF6;&#x5904;&#x7406;&#x64CD;&#x4F5C;&#x3002;<br><code>fs.readFileSync</code>&#x5C31;&#x662F;&#x5C06;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x8BFB;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;<br><code>__dirname</code>&#x662F;NodeJS&#x5185;&#x7F6E;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x8868;&#x660E;&#x5F53;&#x524D;&#x811A;&#x672C;&#xFF08;&#x4E5F;&#x5C31;&#x662F;hello.js&#xFF09;&#x6240;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><code>ajax</code>&#x8BF7;&#x6C42;&#xFF1A;</p>
+<pre><code class="js">    function ajaxload(){
+    var result = document.getElementById(&apos;result&apos;);
+    // &#x521B;&#x5EFA;&#x4E00;&#x4E2A; AJAX &#x8BF7;&#x6C42;
+    var xhr = new XMLHttpRequest();
+    // &#x6253;&#x5F00;URL&#xFF1A;/date
+    xhr.open(&apos;GET&apos;, &apos;url.xx&apos;, true);
+    // xhr &#x72B6;&#x6001;&#x6539;&#x53D8;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;
+    xhr.onreadystatechange=function(){
+    // &#x72B6;&#x6001;&#x4E3A;4&#x8868;&#x793A;&#x54CD;&#x5E94;&#x5DF2;&#x5C31;&#x7EEA;&#xFF1B;&#x72B6;&#x6001;&#x7801;200&#x8868;&#x793A;&#x6210;&#x529F;&#x7684;&#x54CD;&#x5E94;
+    if (xhr.readyState==4 &amp;&amp; xhr.status==200)
+      // &#x663E;&#x793A;&#x54CD;&#x5E94;&#x6587;&#x672C;
+      result.innerHTML=xhr.responseText;
+    }
+    xhr.send();
+    }</code></pre>
+<h2 id="&#x8DEF;&#x7531;&#x8F6C;&#x6362;"><a href="#&#x8DEF;&#x7531;&#x8F6C;&#x6362;" class="headerlink" title="&#x8DEF;&#x7531;&#x8F6C;&#x6362;"></a>&#x8DEF;&#x7531;&#x8F6C;&#x6362;</h2><pre><code class="js">var http = require(&apos;http&apos;);
+var fs = require(&apos;fs&apos;);
+var server = http.createServer(function (req, res) {
+    var html;
+    if (req.url === &apos;/account/signin&apos;) {
+        res.writeHead(200, {&apos;Content-Type&apos;: &apos;text/html&apos;});
+        html = fs.readFileSync(__dirname + &apos;/signin.html&apos;);
+        res.end(html);
+    } else if (req.url === &apos;/account/signup&apos;) {
+        res.writeHead(200, {&apos;Content-Type&apos;: &apos;text/html&apos;});
+        html = fs.readFileSync(__dirname + &apos;/signup.html&apos;);
+        res.end(html);
+    } else {
+        res.writeHead(404);
+        res.end(&apos;Resource Not Found&apos;);
+    }
+
+});
+server.listen(1337, &apos;127.0.0.1&apos;);</code></pre>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x9996;&#x9875;&#x8BBE;&#x7F6E;<code>a</code>&#x6807;&#x7B7E;&#x94FE;&#x63A5;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x94FE;&#x63A5;&#xFF0C;&#x90FD;&#x4F1A;&#x67E5;&#x8BE2;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x670D;&#x52A1;&#x5668;&#x90FD;&#x5BF9;&#x8DF3;&#x8F6C;&#x94FE;&#x63A5;&#x505A;&#x51FA;&#x53CD;&#x5E94;&#x3002;</p>
+<h2 id="&#x5FEB;&#x901F;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;"><a href="#&#x5FEB;&#x901F;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;" class="headerlink" title="&#x5FEB;&#x901F;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;"></a>&#x5FEB;&#x901F;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;</h2><p>&#x9996;&#x5148;&#x9700;&#x8981; &#x5168;&#x5C40;&#x5B89;&#x88C5; http-server</p>
+<pre><code>npm install -g http-server</code></pre><p>http-server &#x542F;&#x52A8;</p>
+<pre><code>http-server -a 127.0.0.1 -p 7070</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x4E00;&#x53E5;&#x547D;&#x4EE4;&#x542F;&#x52A8;&#x4E86;&#x4E00;&#x4E2A;node.js &#x7684;&#x9759;&#x6001;&#x670D;&#x52A1;&#x5668;. &#x76D1;&#x542C;&#x672C;&#x5730; 7070 &#x7AEF;&#x53E3;.<br>&#x9759;&#x6001;&#x76EE;&#x5F55;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x8FD0;&#x884C; &#x547D;&#x4EE4;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x5F53;&#x524D;&#x9879;&#x76EE;&#x4E2D;&#x5B58;&#x5728; <code>public</code>&#x6587;&#x4EF6;&#x5939;,&#x90A3;&#x4E48;&#x9ED8;&#x8BA4;&#x9759;&#x6001;&#x76EE;&#x5F55;&#x4F1A;&#x6307;&#x5B9A;&#x5230; <code>public</code><br>&#x5982;&#x679C;&#x6CA1;&#x6709; <code>public</code>&#x6587;&#x4EF6;&#x5939;,&#x90A3;&#x4E48;&#x9759;&#x6001;&#x76EE;&#x5F55;&#x5C31;&#x662F; &#x6839;&#x76EE;&#x5F55; <code>./</code></p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x628A; <code>http-server -a 127.0.0.1 -p 7070</code> &#x5199;&#x5165;&#x5230; <code>package.json</code>&#x6587;&#x4EF6;&#x4E2D;&#x7684; scripts &#x8282;&#x70B9;</p>
+<pre><code class="js">&quot;scripts&quot;: {
+   &quot;start&quot;: &quot;http-server -a 127.0.0.1 -p 7070&quot;
+ }</code></pre>
+<blockquote>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;  npm start &#x6765;&#x542F;&#x52A8;&#x9759;&#x6001;&#x670D;&#x52A1;&#x5668;</p>
+<blockquote>
+<p>&#x8BE6;&#x7EC6;&#x53C2;&#x6570;&#xFF1A;<a href="http://yijiebuyi.com/blog/359ff66c69934c178dfa8baa32427aef.html" target="_blank" rel="noopener">http://yijiebuyi.com/blog/359ff66c69934c178dfa8baa32427aef.html</a></p>
+</blockquote>
+</blockquote>
+<h3 id="&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;"><a href="#&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;" class="headerlink" title="&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;"></a>&#x547D;&#x4EE4;&#x884C;&#x64CD;&#x4F5C;</h3><blockquote>
+<p>netstat -anp tcp</p>
+</blockquote>
+<p>&#x67E5;&#x770B;&#x7AEF;&#x53E3;&#x5360;&#x7528;&#x60C5;&#x51B5;</p>
+<blockquote>
+<p>kill -9 XXX</p>
+</blockquote>
+<p>&#x6740;&#x6B7B;&#x67D0;PID&#x8FDB;&#x7A0B;</p>
+<blockquote>
+<p>lsof -i:80</p>
+</blockquote>
+<p>&#x67E5;&#x770B;&#x67D0;&#x7AEF;&#x53E3;&#x5360;&#x7528;&#x60C5;&#x51B5;&#xFF0C;i&#x53C2;&#x6570;&#x8868;&#x793A;&#x7F51;&#x7EDC;&#x94FE;&#x63A5;&#xFF0C;:80&#x6307;&#x660E;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x8BE5;&#x547D;&#x4EE4;&#x4F1A;&#x540C;&#x65F6;&#x5217;&#x51FA;PID&#xFF0C;&#x65B9;&#x4FBF;kill</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 luyue94666@163.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Http服务器</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Eifersucht">Eifersucht</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-06-28, 16:03:55</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-19, 14:29:29</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/06/28/Nodejs/HTTP服务器/" title="Http服务器">http://luyue94.github.com/2018/06/28/Nodejs/HTTP服务器/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 luyue94</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#CSS','#Node','#前端','#React','#浏览器','#移动端','#工具','#JS','#Vue',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+    .post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>

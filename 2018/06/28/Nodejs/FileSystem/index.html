@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>FileSystem | Hexo</title>
+  <meta name="keywords" content=" Node ">
+  <meta name="description" content="FileSystem | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="2019&amp;#x65B0;&amp;#x7248;React&amp;#x5168;&amp;#x5BB6;&amp;#x6876;&amp;#x514D;&amp;#x8D39;&amp;#x89C6;&amp;#x9891;&amp;#xFF08;84&amp;#x96C6;&amp;#xFF09;https://juejin.im/post/5d817a15f265da039929a761">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TODO">
+<meta property="og:url" content="http://luyue94.github.com/2019/09/20/TODO/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019&amp;#x65B0;&amp;#x7248;React&amp;#x5168;&amp;#x5BB6;&amp;#x6876;&amp;#x514D;&amp;#x8D39;&amp;#x89C6;&amp;#x9891;&amp;#xFF08;84&amp;#x96C6;&amp;#xFF09;https://juejin.im/post/5d817a15f265da039929a761">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-20T09:34:19.832Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TODO">
+<meta name="twitter:description" content="2019&amp;#x65B0;&amp;#x7248;React&amp;#x5168;&amp;#x5BB6;&amp;#x6876;&amp;#x514D;&amp;#x8D39;&amp;#x89C6;&amp;#x9891;&amp;#xFF08;84&amp;#x96C6;&amp;#xFF09;https://juejin.im/post/5d817a15f265da039929a761">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-dark.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>Eifersucht</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/luyue94" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:luyue94666@163.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=84285251&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(69)</small></div></li>
+    
+        
+            
+            <li><div data-rel="前端"><i class="fold iconfont icon-right"></i>前端<small>(38)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="ES6">ES6<small>(9)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="JavaScript">JavaScript<small>(17)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="面试">面试<small>(6)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Nodejs">Nodejs<small>(13)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="工具">工具<small>(7)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="后端">后端<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="算法">算法<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="69">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">CSS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Node</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">前端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">React</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">移动端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">工具</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">JS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Vue</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="前端 "
+           href="/2018/03/23/CSS/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="CSS">CSS</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/20/TODO/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="TODO">TODO</span>
+            <span class="post-date" title="2019-09-20 14:57:00">2019/09/20</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Buffer/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Buffer">Buffer</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/EventEmitter/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="EventEmitter">EventEmitter</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Directory/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Node">Node</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/FileSystem/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="FileSystem">FileSystem</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/HTTP服务器/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Http服务器">Http服务器</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/module/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Module">Module</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Stream/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Stream">Stream</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/http模块/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Http模块">Http模块</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/基础笔记/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="基础笔记">基础笔记</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/node应用/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="应用">应用</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/process/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Process">Process</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/模块/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="模块">模块</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/HTML/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="HTML">HTML</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/ReactNative/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Navtive2">React Navtive2</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/ReactNative样式/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Native">React Native</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/浏览器 http/"
+           data-tag="浏览器"
+           data-author="" >
+            <span class="post-title" title="浏览器 HTTP">浏览器 HTTP</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/移动端/"
+           data-tag="移动端"
+           data-author="" >
+            <span class="post-title" title="移动端">移动端</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/emmet语法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="emmet">emmet</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="后端 "
+           href="/2018/03/23/后端/MongoDB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="MongoDB">MongoDB</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/markdown语法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Markdown">Markdown</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/scss和gulp-sass/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Gulp-sass">Gulp-sass</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/gulp+webpack配置/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="gulp+webpack的配置">gulp+webpack的配置</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/webpack/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Webpack">Webpack</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/博客搭建/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="博客搭建">博客搭建</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/工具/工具/"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="开发工具">开发工具</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="工具 "
+           href="/2018/03/23/工具/正则表达式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式">正则表达式</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/算法/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="算法问题">算法问题</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/树与二叉树/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="树与二叉树">树与二叉树</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/算法排序/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="排序">排序</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2018/03/23/算法/数据结构/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数据结构">数据结构</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/JS/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="面试：JS">面试：JS</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/20/面试/深拷贝/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="深拷贝">深拷贝</span>
+            <span class="post-date" title="2019-09-20 14:39:02">2019/09/20</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/面试常见问题/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="面试常见问题">面试常见问题</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/阿里2017/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="2017暑期阿里面试总结(前端方向)">2017暑期阿里面试总结(前端方向)</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/10/面试/Vue/"
+           data-tag="Vue"
+           data-author="" >
+            <span class="post-title" title="面试：Vue">面试：Vue</span>
+            <span class="post-date" title="2019-09-10 20:36:20">2019/09/10</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6基础/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6基础">ES6基础</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6函数扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6函数扩展">ES6函数扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6正则表达式扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6正则表达式扩展">ES6正则表达式扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6数组扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6数组扩展">ES6数组扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/字符串/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6字符串">ES6字符串</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/let与const命令/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6let与const">ES6let与const</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/字符编码/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6字符编码">ES6字符编码</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/解构赋值/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6解构赋值">ES6解构赋值</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/HTML5/SVG/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="SVG">SVG</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/HTML5/本地存储/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="localStorage与sessionStorage">localStorage与sessionStorage</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/Ajax/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Ajax">Ajax</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/CommonJS/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="CommonJs">CommonJs</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/DOM样式/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="DOM样式">DOM样式</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/DOM对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="DOM对象">DOM对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/JSON/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="JSON">JSON</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/JavaScript数值/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数值">数值</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/export、import与require/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="模块加载">模块加载</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/HTML网页API/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="浏览器API">浏览器API</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/webpack/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="webpack">webpack</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/Object对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Object对象">Object对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/npm/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="npm">npm</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/window对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Window对象">Window对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/标准对象/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="标准对象">标准对象</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/数组/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数组">数组</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/函数/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="函数">函数</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/移动端事件/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="移动端事件">移动端事件</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 JavaScript "
+           href="/2018/03/23/前端/javascript/面向对象编程/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="面向对象编程">面向对象编程</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/React1/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React1">React1</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/React2/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React2">React2</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 "
+           href="/2018/03/23/前端/react/reactRouter/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React Router">React Router</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="前端 ES6 "
+           href="/2018/03/23/前端/ES6/ES6对象扩展/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ES6对象扩展">ES6对象扩展</span>
+            <span class="post-date" title="2018-03-23 15:13:49">2018/03/23</span>
+        </a>
+        
+        <a  class="Nodejs "
+           href="/2018/06/28/Nodejs/Express中文文档/"
+           data-tag="Node"
+           data-author="" >
+            <span class="post-title" title="Express 4.x API">Express 4.x API</span>
+            <span class="post-date" title="2018-06-28 16:03:55">2018/06/28</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-Nodejs/FileSystem" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">FileSystem</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="Nodejs">Nodejs</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">Node</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-09-19 14:29:28'>2018-06-28 16:03</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#FileSystem简介"><span class="toc-text">FileSystem简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-open-path-flags-mode-callback"><span class="toc-text">fs.open(path, flags, [mode], callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-read-fd-buffer-offset-length-position-callback"><span class="toc-text">fs.read(fd, buffer, offset, length, position, callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-write-fd-buffer-offset-length-position-callback"><span class="toc-text">fs.write(fd, buffer, offset, length[, position], callback)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件直接操作"><span class="toc-text">文件直接操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-writeFile-filename-data-encoding-’utf8’-callback"><span class="toc-text">fs.writeFile(filename, data, encoding=’utf8’, [callback])</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-readFile-filename-options-callback"><span class="toc-text">fs.readFile(filename, [options], callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-unlink-path-callback"><span class="toc-text">fs.unlink(path, callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-rename-oldPath-newPath-callback"><span class="toc-text">fs.rename(oldPath, newPath, callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-stat-path-callback"><span class="toc-text">fs.stat(path, callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-watch-filename-options-listener"><span class="toc-text">fs.watch(filename, [options], [listener])</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件夹操作"><span class="toc-text">文件夹操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-mkdir-path-mode-callback"><span class="toc-text">fs.mkdir(path, [mode], callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-rmdir-path-callback"><span class="toc-text">fs.rmdir(path, callback)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fs-readdir-path-callback"><span class="toc-text">fs.readdir(path, callback)</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="FileSystem&#x7B80;&#x4ECB;"><a href="#FileSystem&#x7B80;&#x4ECB;" class="headerlink" title="FileSystem&#x7B80;&#x4ECB;"></a>FileSystem&#x7B80;&#x4ECB;</h2><p>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6A21;&#x5757;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x5305;&#x88C5;&#x7684;&#x6807;&#x51C6; <strong>POSIX</strong> &#x6587;&#x4EF6; <strong>I/O</strong> &#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#x96C6;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528;<code>require(&apos;fs&apos;)</code>&#x6765;&#x83B7;&#x53D6;&#x8BE5;&#x6A21;&#x5757;&#x3002;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#x5747;&#x6709;&#x5F02;&#x6B65;&#x548C;&#x540C;&#x6B65;&#x7248;&#x672C;&#x3002;</p>
+<h3 id="fs-open-path-flags-mode-callback"><a href="#fs-open-path-flags-mode-callback" class="headerlink" title="fs.open(path, flags, [mode], callback)"></a>fs.open(path, flags, [mode], callback)</h3><p>fs.open(path, flags, [mode], callback)</p>
+<ul>
+<li>path : &#x8981;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;</li>
+<li>flags : &#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F; &#x8BFB;/&#x5199;</li>
+<li>mode : &#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x6A21;&#x5F0F; &#x8BFB;/&#x5199;/&#x6267;&#x884C;  4/2/1</li>
+<li>callback : &#x56DE;&#x8C03;<ul>
+<li>err : &#x6587;&#x4EF6;&#x6253;&#x5F00;&#x5931;&#x8D25;&#x7684;&#x9519;&#x8BEF;&#x4FDD;&#x5B58;&#x5728;err&#x91CC;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x6210;&#x529F;err&#x4E3A;null</li>
+<li>fd : &#x88AB;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x6807;&#x8BC6;&#xFF0C;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="js">fs.open(&apos;1.txt&apos;, &apos;r&apos;, function(err, fd) {
+
+    //console.log(err);
+    //console.log(fd);
+
+    if (err) {
+        console.log( &apos;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x5931;&#x8D25;&apos; );
+    } else {
+        console.log( &apos;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x6210;&#x529F;&apos; );
+        console.log( fd );
+    }
+
+});</code></pre>
+<h3 id="fs-read-fd-buffer-offset-length-position-callback"><a href="#fs-read-fd-buffer-offset-length-position-callback" class="headerlink" title="fs.read(fd, buffer, offset, length, position, callback)"></a>fs.read(fd, buffer, offset, length, position, callback)</h3><ul>
+<li>fd : &#x901A;&#x8FC7;open&#x65B9;&#x6CD5;&#x6210;&#x529F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8FD4;&#x56DE;&#x7684;&#x7F16;&#x53F7;</li>
+<li>buffer : buffer&#x5BF9;&#x8C61;</li>
+<li>offset : &#x65B0;&#x7684;&#x5185;&#x5BB9;&#x6DFB;&#x52A0;&#x5230;buffer&#x4E2D;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</li>
+<li>length &#xFF1A; &#x6DFB;&#x52A0;&#x5230;buffer&#x4E2D;&#x5185;&#x5BB9;&#x7684;&#x957F;&#x5EA6;</li>
+<li>position &#xFF1A;&#x8BFB;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</li>
+<li>callback : &#x56DE;&#x8C03;<ul>
+<li>err</li>
+<li>uffer&#x7684;&#x957F;&#x5EA6;</li>
+<li>buffer&#x5BF9;&#x8C61;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="js">fs.open(&apos;1.txt&apos;, &apos;r&apos;, function(err, fd) {
+    if (err) {
+        console.log(&apos;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x5931;&#x8D25;&apos;);
+        console.log(err);
+    } else {
+        var bf1 = new Buffer(&apos;123456789&apos;);
+        fs.read( fd, bf1, 0, 4, null, function( err, len, newBf ) {
+            console.log( newBf );
+        } );
+    }
+});
+</code></pre>
+<h3 id="fs-write-fd-buffer-offset-length-position-callback"><a href="#fs-write-fd-buffer-offset-length-position-callback" class="headerlink" title="fs.write(fd, buffer, offset, length[, position], callback)"></a>fs.write(fd, buffer, offset, length[, position], callback)</h3><ul>
+<li>fs.write(fd, buffer, offset, length[, position], callback)</li>
+<li>fd : &#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;</li>
+<li>buffer : &#x8981;&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;</li>
+<li>offset : buffer&#x5BF9;&#x8C61;&#x4E2D;&#x8981;&#x5199;&#x5165;&#x7684;&#x6570;&#x636E;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</li>
+<li>length : &#x8981;&#x5199;&#x5165;&#x7684;buffer&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;</li>
+<li>position : fd&#x4E2D;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</li>
+<li>callback : &#x56DE;&#x8C03;<ul>
+<li>err:&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x6CA1;&#x6709;&#x5C31;&#x663E;&#x793A;<code>null</code></li>
+<li>written:&#x8868;&#x660E;&#x4F20;&#x5165;&#x7684;<code>string</code>&#x9700;&#x8981;&#x5199;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5B57;&#x8282;&#x957F;&#x5EA6;</li>
+<li>string:&#x8868;&#x660E;&#x4F20;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="js">fs.write( fd, bf, 0, 3, 5, function() {
+            console.log(arguments);
+        } )</code></pre>
+<p>&#x53E6;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#xFF1A;</p>
+<p><strong>fs.write(fd, data[, position[, encoding]], callback)</strong></p>
+<pre><code class="js">fs.write(fd, &apos;1234aqws&#x4F60;&#x597D;&apos;, 0, &apos;utf-8&apos;, function(err, written, string) {
+            console.log(&quot;ok&quot;);
+            console.log(err);
+            console.log(written);
+            console.log(string);
+});</code></pre>
+<p>&#x64CD;&#x4F5C;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x8981;&#x5173;&#x95ED;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code class="js">fs.close(fd, function() {
+
+});</code></pre>
+<h2 id="&#x6587;&#x4EF6;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;"><a href="#&#x6587;&#x4EF6;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;" class="headerlink" title="&#x6587;&#x4EF6;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;"></a>&#x6587;&#x4EF6;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;</h2><h3 id="fs-writeFile-filename-data-encoding-&#x2019;utf8&#x2019;-callback"><a href="#fs-writeFile-filename-data-encoding-&#x2019;utf8&#x2019;-callback" class="headerlink" title="fs.writeFile(filename, data, encoding=&#x2019;utf8&#x2019;, [callback])"></a>fs.writeFile(filename, data, encoding=&#x2019;utf8&#x2019;, [callback])</h3><p>&#x5F02;&#x6B65;&#x5730;&#x5199;&#x5165;&#x6570;&#x636E;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x66FF;&#x4EE3;&#x6587;&#x4EF6;&#x3002; <code>data</code> &#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x4E00;&#x4E2A; <code>buffer</code>&#x3002;</p>
+<ul>
+<li>file <string> | <buffer> | <integer> &#x6587;&#x4EF6;&#x540D;&#x6216;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;</integer></buffer></string></li>
+<li>data <string> | <buffer></buffer></string></li>
+<li>options <object> | <string><ul>
+<li>encoding <string> | <null> &#x9ED8;&#x8BA4; = &#x2018;utf8&#x2019;</null></string></li>
+<li>mode <integer> &#x9ED8;&#x8BA4; = 0o666</integer></li>
+<li>flag <string> &#x9ED8;&#x8BA4; = &#x2018;w&#x2019;</string></li>
+</ul>
+</string></object></li>
+<li>callback <function></function></li>
+</ul>
+<h3 id="fs-readFile-filename-options-callback"><a href="#fs-readFile-filename-options-callback" class="headerlink" title="fs.readFile(filename, [options], callback)"></a>fs.readFile(filename, [options], callback)</h3><ul>
+<li>filename {String}<ul>
+<li>options {Object}</li>
+<li>encoding {String | Null} default = null</li>
+</ul>
+</li>
+<li>flag {String} default = &#x2018;r&#x2019;</li>
+<li>callback {Function}</li>
+</ul>
+<p>&#x5F02;&#x6B65;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5168;&#x90E8;&#x5185;&#x5BB9;&#x3002;&#x4E3E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="js">fs.readFile(&apos;test.txt&apos;, function (err, data) {
+  if (err) throw err;
+  console.log(data);
+});</code></pre>
+<h3 id="fs-unlink-path-callback"><a href="#fs-unlink-path-callback" class="headerlink" title="fs.unlink(path, callback)"></a>fs.unlink(path, callback)</h3><p>&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</p>
+<p>&#x5B8C;&#x6210;&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;callback&#xFF09;&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x5F02;&#x5E38;&#x4FE1;&#x606F;.</p>
+<h3 id="fs-rename-oldPath-newPath-callback"><a href="#fs-rename-oldPath-newPath-callback" class="headerlink" title="fs.rename(oldPath, newPath, callback)"></a>fs.rename(oldPath, newPath, callback)</h3><p>&#x91CD;&#x547D;&#x540D;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</p>
+<p>&#x5B8C;&#x6210;&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;callback&#xFF09;&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x5F02;&#x5E38;&#x4FE1;&#x606F;.</p>
+<h3 id="fs-stat-path-callback"><a href="#fs-stat-path-callback" class="headerlink" title="fs.stat(path, callback)"></a>fs.stat(path, callback)</h3><p>&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</p>
+<h3 id="fs-watch-filename-options-listener"><a href="#fs-watch-filename-options-listener" class="headerlink" title="fs.watch(filename, [options], [listener])"></a>fs.watch(filename, [options], [listener])</h3><p>&#x76D1;&#x542C;&#x6587;&#x4EF6;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x76D1;&#x542C;&#x5668;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5F97;&#x5230;&#x4E24;&#x4E2A;&#x53C2;&#x6570;<code>(event, filename)</code>&#x3002;&#x5176;&#x4E2D; <code>event</code> &#x662F; &#x2018;rename&#x2019;&#xFF08;&#x91CD;&#x547D;&#x540D;&#xFF09;&#x6216;&#x8005; &#x2018;change&#x2019;&#xFF08;&#x6539;&#x53D8;&#xFF09;&#xFF0C;&#x800C; <code>filename</code> &#x5219;&#x662F;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;</p>
+<h2 id="&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;"><a href="#&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;" class="headerlink" title="&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;"></a>&#x6587;&#x4EF6;&#x5939;&#x64CD;&#x4F5C;</h2><h3 id="fs-mkdir-path-mode-callback"><a href="#fs-mkdir-path-mode-callback" class="headerlink" title="fs.mkdir(path, [mode], callback)"></a>fs.mkdir(path, [mode], callback)</h3><p>&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5B8C;&#x6210;&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;callback&#xFF09;&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x3002;&#x6587;&#x4EF6; <code>mode</code> &#x9ED8;&#x8BA4;&#x4E3A; 0777&#x3002;</p>
+<h3 id="fs-rmdir-path-callback"><a href="#fs-rmdir-path-callback" class="headerlink" title="fs.rmdir(path, callback)"></a>fs.rmdir(path, callback)</h3><p>&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;</p>
+<h3 id="fs-readdir-path-callback"><a href="#fs-readdir-path-callback" class="headerlink" title="fs.readdir(path, callback)"></a>fs.readdir(path, callback)</h3><p>&#x8BFB;&#x53D6; path &#x8DEF;&#x5F84;&#x6240;&#x5728;&#x76EE;&#x5F55;&#x7684;&#x5185;&#x5BB9;&#x3002; &#x56DE;&#x8C03;&#x51FD;&#x6570; <code>(callback)</code> &#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570; <code>(err, files)</code>&#x5176;&#x4E2D; <code>files</code> &#x662F;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x76EE;&#x5F55;&#x4E2D;&#x6240;&#x5305;&#x542B;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x4E0D;&#x5305;&#x62EC; &#x2018;.&#x2019; &#x548C; &#x2018;..&#x2019;&#x3002;</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 luyue94666@163.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>FileSystem</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Eifersucht">Eifersucht</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-06-28, 16:03:55</p>
+    <p><span class="copy-title">最后更新:</span>2019-09-19, 14:29:28</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/06/28/Nodejs/FileSystem/" title="FileSystem">http://luyue94.github.com/2018/06/28/Nodejs/FileSystem/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 luyue94</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#CSS','#Node','#前端','#React','#浏览器','#移动端','#工具','#JS','#Vue',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+    .post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>
